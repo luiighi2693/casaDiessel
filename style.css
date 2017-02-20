@@ -6,33 +6,33 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
-h1 {
-	font-weight: 700;
-}
-h1 strong {
-	font-weight: 900;
-}
-h2 {
-	text-transform: uppercase;
-	line-height: 20px;
-	font-weight: 600;
-	margin: 0;
-	color: #555;
-}
-h3 {
-	font-size: 16px;
-	font-weight: 700;
-	color: #555;
-}
-h4 {
-	font-weight: 500;
-	color: #555;
-}
-h5 {
-	text-transform: uppercase;
-	font-weight: 700;
-	line-height: 20px;
-}
+/*h1 {*/
+	/*font-weight: 700;*/
+/*}*/
+/*h1 strong {*/
+	/*font-weight: 900;*/
+/*}*/
+/*h2 {*/
+	/*text-transform: uppercase;*/
+	/*line-height: 20px;*/
+	/*font-weight: 600;*/
+	/*margin: 0;*/
+	/*color: #555;*/
+/*}*/
+/*h3 {*/
+	/*font-size: 16px;*/
+	/*font-weight: 700;*/
+	/*color: #555;*/
+/*}*/
+/*h4 {*/
+	/*font-weight: 500;*/
+	/*color: #555;*/
+/*}*/
+/*h5 {*/
+	/*text-transform: uppercase;*/
+	/*font-weight: 700;*/
+	/*line-height: 20px;*/
+/*}*/
 p {
 	font-size: 14px;
 }
@@ -587,4 +587,27 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #intro .intro-body H1 {
 	font-size: 5em;
 }
+}
+
+
+.contact{
+	display: table;
+	width: 100%;
+	height: auto;
+	padding: 100px 0;
+	text-align: center;
+	color: #fff;
+	background: url(intro-bg.jpg) no-repeat center center fixed;
+	background-color: #000;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+
+@media(min-width:768px) {
+	.contact {
+		height: 100%;
+		padding: 0;
+	}
 }
