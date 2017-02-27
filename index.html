@@ -64,6 +64,25 @@
 <script src='js/velocity.ui.min.js'></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/index.js"></script>
+<script>
+  var n = 2;
+  var cont = 2;
+  window.setInterval(function(){
+      if(cont == 2){
+          $('.home').css("background-image", "url(img/disel.jpg)");
+      }
 
+      if(cont == 1){
+          $('.home').css("background-image", "url(img/intro-bg.jpg)");
+      }
+
+      if(cont == 2){
+          cont = 1;
+      }else{
+          cont = 2;
+      }
+  }, 6000);
+
+</script>
 </body>
 </html>

@@ -11,6 +11,8 @@ body {
   background-size: cover;
   background-position: center center;
   overflow: hidden;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
 }
 
 
