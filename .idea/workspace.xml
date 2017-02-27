@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30db70f-60e4-4a7d-9383-a12402a06dd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/disel.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/toyota.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productos.html" afterPath="$PROJECT_DIR$/productos.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,8 +87,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="456" column="3" lean-forward="true" selection-start-line="456" selection-start-column="3" selection-end-line="456" selection-end-column="3" />
+            <state relative-caret-position="201">
+              <caret line="458" column="0" lean-forward="true" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -403,7 +400,7 @@
       <workItem from="1487651922692" duration="17000" />
       <workItem from="1487954221527" duration="1575000" />
       <workItem from="1488117160619" duration="13243000" />
-      <workItem from="1488207824043" duration="4793000" />
+      <workItem from="1488207824043" duration="5909000" />
     </task>
     <task id="LOCAL-00001" summary="hidden background color in nav bar">
       <created>1487640821837</created>
@@ -440,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488209583178</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="carousel">
+      <created>1488212678596</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1488212678596</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28291000" />
+    <option name="totallyTimeSpent" value="29407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -498,7 +502,8 @@
     <MESSAGE value="estructura del grid de productos" />
     <MESSAGE value="scripts locales" />
     <MESSAGE value="bista detallada de articulo" />
-    <option name="LAST_COMMIT_MESSAGE" value="bista detallada de articulo" />
+    <MESSAGE value="carousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="carousel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -987,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="456" column="3" lean-forward="true" selection-start-line="456" selection-start-column="3" selection-end-line="456" selection-end-column="3" />
+        <state relative-caret-position="201">
+          <caret line="458" column="0" lean-forward="true" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
           <folding />
         </state>
       </provider>
