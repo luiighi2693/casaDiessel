@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2017 a las 19:00:00
+-- Tiempo de generación: 06-03-2017 a las 19:06:52
 -- Versión del servidor: 5.7.9
 -- Versión de PHP: 5.6.16
 
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `rol` (
   `codigo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `rol_id_uindex` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `rol`
@@ -112,7 +112,8 @@ CREATE TABLE IF NOT EXISTS `rol` (
 
 INSERT INTO `rol` (`id`, `codigo`) VALUES
 (1, 'Administrador total'),
-(2, 'Administrador asistente');
+(2, 'Administrador Ejecutivo'),
+(3, 'Asistente');
 
 -- --------------------------------------------------------
 
