@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2017 a las 19:06:52
+-- Tiempo de generación: 07-03-2017 a las 18:20:00
 -- Versión del servidor: 5.7.9
 -- Versión de PHP: 5.6.16
 
@@ -73,6 +73,9 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `codigo` varchar(50) DEFAULT NULL,
   `descripcion` varchar(500) DEFAULT NULL,
   `marca` varchar(50) DEFAULT NULL,
+  `idTipo` int(11) DEFAULT NULL,
+  `caracteristicas` varchar(100) DEFAULT NULL,
+  `referencia` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `producto_id_uindex` (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -114,6 +117,20 @@ INSERT INTO `rol` (`id`, `codigo`) VALUES
 (1, 'Administrador total'),
 (2, 'Administrador Ejecutivo'),
 (3, 'Asistente');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo`
+--
+
+DROP TABLE IF EXISTS `tipo`;
+CREATE TABLE IF NOT EXISTS `tipo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tipo_id_uindex` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
