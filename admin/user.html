@@ -262,7 +262,16 @@
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
 <script>
-
+    jQuery.ajax({
+        type: "POST",
+        url: "util.php",
+        data: {
+            "method" : "getAllUsers"
+        },
+        success: function(data){
+            console.log($.parseJSON(data));
+        }
+    });
 </script>
 </body>
 </html>
