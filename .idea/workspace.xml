@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30db70f-60e4-4a7d-9383-a12402a06dd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user.html" afterPath="$PROJECT_DIR$/admin/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/userDetail.html" afterPath="$PROJECT_DIR$/admin/userDetail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/product.html" afterPath="$PROJECT_DIR$/admin/product.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/util.php" afterPath="$PROJECT_DIR$/admin/util.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -54,6 +51,72 @@
       </PATH_ELEMENT>
     </PATH>
   </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="util.php" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/admin/util.php">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="574">
+                    <caret line="119" column="22" lean-forward="false" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="22" />
+                    <folding>
+                      <marker date="1489374142385" expanded="true" signature="921:959" ph="SELECT id, n... usuario" />
+                      <marker date="1489374142385" expanded="true" signature="1068:1125" ph="SELECT id, n... usuario" />
+                      <marker date="1489374142385" expanded="true" signature="1068:1206" ph="SELECT id, n... " />
+                      <marker date="1489374142385" expanded="true" signature="1149:1206" ph="SELECT id, n... usuario" />
+                      <marker date="1489374142385" expanded="true" signature="1285:1343" ph="SELECT id, n... producto" />
+                      <marker date="1489374142385" expanded="true" signature="1455:1532" ph="SELECT id, n... producto" />
+                      <marker date="1489374142385" expanded="true" signature="1455:1838" ph="SELECT id, n... " />
+                      <marker date="1489374142385" expanded="true" signature="1556:1633" ph="SELECT id, n... producto" />
+                      <marker date="1489374142385" expanded="true" signature="1657:1733" ph="SELECT id, n... producto" />
+                      <marker date="1489374142385" expanded="true" signature="1757:1838" ph="SELECT id, n... producto" />
+                      <marker date="1489374142385" expanded="true" signature="1914:1931" ph="SELECT * FRO... rol" />
+                      <marker date="1489374142385" expanded="true" signature="2007:2031" ph="SELECT * FRO... maquinaria" />
+                      <marker date="1489374142385" expanded="true" signature="2101:2119" ph="SELECT * FRO... tipo" />
+                      <marker date="1489374142385" expanded="true" signature="2188:2217" ph="DELETE FROM " />
+                      <marker date="1489374142385" expanded="true" signature="2188:2218" ph="DELETE FROM " />
+                      <marker date="1489374142385" expanded="true" signature="2302:2333" ph="SELECT * FRO... usuario" />
+                      <marker date="1489374142385" expanded="true" signature="2415:2485" ph="INSERT INTO usuario... " />
+                      <marker date="1489374142385" expanded="true" signature="2415:2563" ph="INSERT INTO usuario... " />
+                      <marker date="1489374142385" expanded="true" signature="2415:2564" ph="INSERT INTO usuario... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2651" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2658" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2660" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2669" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2680" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2691" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2692" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2712" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2719" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2720" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2721" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2722" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2749" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2632:2778" ph="UPDATE usuar... " />
+                      <marker date="1489374142385" expanded="true" signature="2638:2651" ph="INSERT INTO usuario... " />
+                      <marker date="1489374142385" expanded="true" signature="2863:2894" ph="DELETE FROM " />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="user.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/admin/user.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="336">
+                    <caret line="165" column="13" lean-forward="false" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="casaDiessel" />
@@ -80,73 +143,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userDetail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userDetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/userDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="88" column="43" lean-forward="true" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/user.html">
+      <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="110" column="98" lean-forward="true" selection-start-line="110" selection-start-column="98" selection-end-line="110" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/util.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="121" column="48" lean-forward="true" selection-start-line="121" selection-start-column="48" selection-end-line="121" selection-end-column="48" />
-              <folding>
-                <marker date="1489372589755" expanded="true" signature="858:896" ph="SELECT id, n... usuario" />
-                <marker date="1489372589755" expanded="true" signature="1005:1062" ph="SELECT id, n... usuario" />
-                <marker date="1489372589755" expanded="true" signature="1005:1143" ph="SELECT id, n... " />
-                <marker date="1489372589755" expanded="true" signature="1086:1143" ph="SELECT id, n... usuario" />
-                <marker date="1489372589755" expanded="true" signature="1222:1280" ph="SELECT id, n... producto" />
-                <marker date="1489372589755" expanded="true" signature="1392:1469" ph="SELECT id, n... producto" />
-                <marker date="1489372589755" expanded="true" signature="1392:1775" ph="SELECT id, n... " />
-                <marker date="1489372589755" expanded="true" signature="1493:1570" ph="SELECT id, n... producto" />
-                <marker date="1489372589755" expanded="true" signature="1594:1670" ph="SELECT id, n... producto" />
-                <marker date="1489372589755" expanded="true" signature="1694:1775" ph="SELECT id, n... producto" />
-                <marker date="1489372589755" expanded="true" signature="1851:1868" ph="SELECT * FRO... rol" />
-                <marker date="1489372589755" expanded="true" signature="1944:1968" ph="SELECT * FRO... maquinaria" />
-                <marker date="1489372589755" expanded="true" signature="2038:2056" ph="SELECT * FRO... tipo" />
-                <marker date="1489372589755" expanded="true" signature="2125:2154" ph="DELETE FROM " />
-                <marker date="1489372589755" expanded="true" signature="2125:2155" ph="DELETE FROM " />
-                <marker date="1489372589755" expanded="true" signature="2239:2270" ph="SELECT * FRO... usuario" />
-                <marker date="1489372589755" expanded="true" signature="2352:2422" ph="INSERT INTO usuario... " />
-                <marker date="1489372589755" expanded="true" signature="2352:2500" ph="INSERT INTO usuario... " />
-                <marker date="1489372589755" expanded="true" signature="2352:2501" ph="INSERT INTO usuario... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2588" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2595" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2597" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2606" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2617" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2628" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2629" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2649" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2656" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2657" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2658" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2659" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2686" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2569:2715" ph="UPDATE usuar... " />
-                <marker date="1489372589755" expanded="true" signature="2575:2588" ph="INSERT INTO usuario... " />
-              </folding>
+      <file leaf-file-name="casadiessel.producto" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.producto">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="casadiessel.usuario" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.usuario">
+      <file leaf-file-name="casadiessel.tipo" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.tipo">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="casadiessel.maquinaria" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.maquinaria">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -192,6 +240,8 @@
       <find>linkFixed</find>
       <find>1.8vw</find>
       <find>userTitle</find>
+      <find>bodyTable</find>
+      <find>deleteUser</find>
     </findStrings>
     <replaceStrings>
       <replace>1vw</replace>
@@ -219,13 +269,13 @@
         <option value="$PROJECT_DIR$/producto.html" />
         <option value="$PROJECT_DIR$/productos.html" />
         <option value="$PROJECT_DIR$/admin/index.html" />
-        <option value="$PROJECT_DIR$/admin/product.html" />
         <option value="$PROJECT_DIR$/admin/productDetail.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/console.sql" />
         <option value="$PROJECT_DIR$/admin/css/sb-admin.css" />
         <option value="$PROJECT_DIR$/admin/user.html" />
-        <option value="$PROJECT_DIR$/admin/util.php" />
         <option value="$PROJECT_DIR$/admin/userDetail.html" />
+        <option value="$PROJECT_DIR$/admin/util.php" />
+        <option value="$PROJECT_DIR$/admin/product.html" />
       </list>
     </option>
   </component>
@@ -425,7 +475,7 @@
       <workItem from="1489342163164" duration="11000" />
       <workItem from="1489345729235" duration="1983000" />
       <workItem from="1489351971011" duration="31000" />
-      <workItem from="1489363947702" duration="8694000" />
+      <workItem from="1489363947702" duration="11008000" />
     </task>
     <task id="LOCAL-00001" summary="hidden background color in nav bar">
       <created>1487640821837</created>
@@ -525,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489354779647</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="union con el backend completo de usuario">
+      <created>1489372714984</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1489372714984</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54488000" />
+    <option name="totallyTimeSpent" value="56802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -544,7 +601,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28968903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -595,7 +652,8 @@
     <MESSAGE value="cambios en el background de color y forma de admin" />
     <MESSAGE value="test de backend" />
     <MESSAGE value="refactorizacion de consultas backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactorizacion de consultas backend" />
+    <MESSAGE value="union con el backend completo de usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="union con el backend completo de usuario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,9 +662,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/style.css" />
-    <entry file="file://$PROJECT_DIR$/bootstrap.css" />
-    <entry file="file://$PROJECT_DIR$/bootstrap.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -768,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/productDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -787,30 +835,6 @@
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.rol" />
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.producto" />
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.tipo" />
-    <entry file="file://$PROJECT_DIR$/admin/css/sb-admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.usuario">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -824,53 +848,125 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/userDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="88" column="43" lean-forward="true" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/util.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="121" column="48" lean-forward="true" selection-start-line="121" selection-start-column="48" selection-end-line="121" selection-end-column="48" />
+        <state relative-caret-position="574">
+          <caret line="119" column="22" lean-forward="false" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="22" />
           <folding>
-            <marker date="1489372589755" expanded="true" signature="858:896" ph="SELECT id, n... usuario" />
-            <marker date="1489372589755" expanded="true" signature="1005:1062" ph="SELECT id, n... usuario" />
-            <marker date="1489372589755" expanded="true" signature="1005:1143" ph="SELECT id, n... " />
-            <marker date="1489372589755" expanded="true" signature="1086:1143" ph="SELECT id, n... usuario" />
-            <marker date="1489372589755" expanded="true" signature="1222:1280" ph="SELECT id, n... producto" />
-            <marker date="1489372589755" expanded="true" signature="1392:1469" ph="SELECT id, n... producto" />
-            <marker date="1489372589755" expanded="true" signature="1392:1775" ph="SELECT id, n... " />
-            <marker date="1489372589755" expanded="true" signature="1493:1570" ph="SELECT id, n... producto" />
-            <marker date="1489372589755" expanded="true" signature="1594:1670" ph="SELECT id, n... producto" />
-            <marker date="1489372589755" expanded="true" signature="1694:1775" ph="SELECT id, n... producto" />
-            <marker date="1489372589755" expanded="true" signature="1851:1868" ph="SELECT * FRO... rol" />
-            <marker date="1489372589755" expanded="true" signature="1944:1968" ph="SELECT * FRO... maquinaria" />
-            <marker date="1489372589755" expanded="true" signature="2038:2056" ph="SELECT * FRO... tipo" />
-            <marker date="1489372589755" expanded="true" signature="2125:2154" ph="DELETE FROM " />
-            <marker date="1489372589755" expanded="true" signature="2125:2155" ph="DELETE FROM " />
-            <marker date="1489372589755" expanded="true" signature="2239:2270" ph="SELECT * FRO... usuario" />
-            <marker date="1489372589755" expanded="true" signature="2352:2422" ph="INSERT INTO usuario... " />
-            <marker date="1489372589755" expanded="true" signature="2352:2500" ph="INSERT INTO usuario... " />
-            <marker date="1489372589755" expanded="true" signature="2352:2501" ph="INSERT INTO usuario... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2588" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2595" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2597" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2606" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2617" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2628" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2629" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2649" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2656" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2657" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2658" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2659" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2686" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2569:2715" ph="UPDATE usuar... " />
-            <marker date="1489372589755" expanded="true" signature="2575:2588" ph="INSERT INTO usuario... " />
+            <marker date="1489374142385" expanded="true" signature="921:959" ph="SELECT id, n... usuario" />
+            <marker date="1489374142385" expanded="true" signature="1068:1125" ph="SELECT id, n... usuario" />
+            <marker date="1489374142385" expanded="true" signature="1068:1206" ph="SELECT id, n... " />
+            <marker date="1489374142385" expanded="true" signature="1149:1206" ph="SELECT id, n... usuario" />
+            <marker date="1489374142385" expanded="true" signature="1285:1343" ph="SELECT id, n... producto" />
+            <marker date="1489374142385" expanded="true" signature="1455:1532" ph="SELECT id, n... producto" />
+            <marker date="1489374142385" expanded="true" signature="1455:1838" ph="SELECT id, n... " />
+            <marker date="1489374142385" expanded="true" signature="1556:1633" ph="SELECT id, n... producto" />
+            <marker date="1489374142385" expanded="true" signature="1657:1733" ph="SELECT id, n... producto" />
+            <marker date="1489374142385" expanded="true" signature="1757:1838" ph="SELECT id, n... producto" />
+            <marker date="1489374142385" expanded="true" signature="1914:1931" ph="SELECT * FRO... rol" />
+            <marker date="1489374142385" expanded="true" signature="2007:2031" ph="SELECT * FRO... maquinaria" />
+            <marker date="1489374142385" expanded="true" signature="2101:2119" ph="SELECT * FRO... tipo" />
+            <marker date="1489374142385" expanded="true" signature="2188:2217" ph="DELETE FROM " />
+            <marker date="1489374142385" expanded="true" signature="2188:2218" ph="DELETE FROM " />
+            <marker date="1489374142385" expanded="true" signature="2302:2333" ph="SELECT * FRO... usuario" />
+            <marker date="1489374142385" expanded="true" signature="2415:2485" ph="INSERT INTO usuario... " />
+            <marker date="1489374142385" expanded="true" signature="2415:2563" ph="INSERT INTO usuario... " />
+            <marker date="1489374142385" expanded="true" signature="2415:2564" ph="INSERT INTO usuario... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2651" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2658" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2660" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2669" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2680" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2691" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2692" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2712" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2719" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2720" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2721" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2722" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2749" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2632:2778" ph="UPDATE usuar... " />
+            <marker date="1489374142385" expanded="true" signature="2638:2651" ph="INSERT INTO usuario... " />
+            <marker date="1489374142385" expanded="true" signature="2863:2894" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/userDetail.html">
+    <entry file="file://$PROJECT_DIR$/admin/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="110" column="98" lean-forward="true" selection-start-line="110" selection-start-column="98" selection-end-line="110" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.producto">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.tipo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="165" column="13" lean-forward="false" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.maquinaria">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

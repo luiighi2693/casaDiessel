@@ -52,6 +52,10 @@ if($_POST['method']=='updateUser'){
     updateUser();
 }
 
+if($_POST['method']=='deleteProduct'){
+    deleteProduct();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -110,6 +114,11 @@ function createUser(){
 
 function updateUser(){
     $query = 'UPDATE usuario SET nombre=\''.$_POST['nombre'].'\', cedula= '.$_POST['cedula'].', clave= '.$_POST['clave'].', idRol= '.$_POST['idRol'].' WHERE id='.$_POST['id'];
+    executeQuery($query);
+}
+
+function deleteProduct(){
+    $query = 'DELETE FROM producto WHERE id= '.$_POST['id'];
     executeQuery($query);
 }
 
