@@ -36,6 +36,22 @@ if($_POST['method']=='getAllTipos'){
     getAllTipos();
 }
 
+if($_POST['method']=='deleteUser'){
+    deleteUser();
+}
+
+if($_POST['method']=='findUserById'){
+    findUserById();
+}
+
+if($_POST['method']=='createUser'){
+    createUser();
+}
+
+if($_POST['method']=='updateUser'){
+    updateUser();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -74,6 +90,26 @@ function getAllMaquinarias(){
 
 function getAllTipos(){
     $query = 'SELECT * FROM tipo';
+    executeQuery($query);
+}
+
+function deleteUser(){
+    $query = 'DELETE FROM usuario WHERE id= '.$_POST['id'];
+    executeQuery($query);
+}
+
+function findUserById(){
+    $query = 'SELECT * FROM usuario WHERE id='.$_POST['id'];
+    executeQuery($query);
+}
+
+function createUser(){
+    $query = 'INSERT INTO usuario (nombre, cedula, clave, idRol) VALUES (\''.$_POST['nombre'].'\', '.$_POST['cedula'].', '.$_POST['clave'].', '.$_POST['idRol'].')';
+    executeQuery($query);
+}
+
+function updateUser(){
+    $query = 'UPDATE usuario SET nombre=\''.$_POST['nombre'].'\', cedula= '.$_POST['cedula'].', clave= '.$_POST['clave'].', idRol= '.$_POST['idRol'].' WHERE id='.$_POST['id'];
     executeQuery($query);
 }
 

@@ -54,15 +54,17 @@
                 <div class="col-lg-12">
                     <h1 class="page-header">
                         Gestión de Usuarios
-                        <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+                        <a href="userDetail.html">
+                            <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+                        </a>
                     </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="col-lg-4 form-group input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
+                        <input id="textSearch" type="text" class="form-control">
+                        <span class="input-group-btn"><button class="btn btn-default" type="button" onclick="search();"><i class="fa fa-search"></i></button></span>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
@@ -74,158 +76,17 @@
                                 <th>Eliminar</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" data-toggle="modal" data-target="#myModal">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>luis12345</td>
-                                <td>1265</td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-pencil"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="fa fa-fw fa-ban"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
+                            <tbody id="bodyTable"></tbody>
                         </table>
-                        <div style="text-align: center;">
-                            <ul class="pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                            </ul>
-                        </div>
+                        <!--<div style="text-align: center;">-->
+                            <!--<ul class="pagination">-->
+                                <!--<li class="active"><a href="#">1</a></li>-->
+                                <!--<li><a href="#">2</a></li>-->
+                                <!--<li><a href="#">3</a></li>-->
+                                <!--<li><a href="#">4</a></li>-->
+                                <!--<li><a href="#">5</a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
                     </div>
                 </div>
             </div>
@@ -235,7 +96,6 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -246,14 +106,12 @@
                     <p>¿Esta seguro que desea eliminar el elemento seleccionado?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">aceptar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="deleteUser();">aceptar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">cancelar</button>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
 
 <script src="js/jquery.js"></script>
@@ -262,6 +120,8 @@
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
 <script>
+    var selectIdForDelete = null;
+
     function getAll() {
         jQuery.ajax({
             type: "POST",
@@ -271,6 +131,7 @@
             },
             success: function(data){
                 console.log($.parseJSON(data));
+                setTableItems(data);
             }
         });
     }
@@ -281,13 +142,52 @@
             url: "util.php",
             data: {
                 "method" : "findByUser",
-                "search" : "jua"
+                "search" : $('#textSearch')[0].value
             },
             success: function(data){
                 console.log($.parseJSON(data));
+                setTableItems(data);
             }
         });
     }
+
+    function search() {
+        if($('#textSearch')[0].value==""){
+            getAll();
+        }else{
+            findByUser()
+        }
+    }
+
+    function selectForDelete(id) {
+        selectIdForDelete = id;
+    }
+
+    function deleteUser() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "deleteUser",
+                "id" : selectIdForDelete
+            },
+            success: function(data){
+                getAll();
+            }
+        });
+    }
+
+    function setTableItems(data) {
+        $('#bodyTable').empty();
+        for(var i=0; i<$.parseJSON(data).length; i++){
+            $('#bodyTable').append('<tr><td>'+$.parseJSON(data)[i].nombre+'</td>' +
+                '<td>'+$.parseJSON(data)[i].cedula+'</td>' +
+                '<td><a href="userDetail.html?id='+$.parseJSON(data)[i].id+'"><i class="fa fa-fw fa-pencil"></i></a></td>' +
+                '<td><a href="#" onclick="selectForDelete('+$.parseJSON(data)[i].id+');" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-ban"></i></a></td></tr>');
+        }
+    }
+
+    getAll();
 
 </script>
 </body>
