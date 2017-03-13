@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30db70f-60e4-4a7d-9383-a12402a06dd7" name="Default" comment="crud de productos">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/productDetail.html" afterPath="$PROJECT_DIR$/admin/productDetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/userDetail.html" afterPath="$PROJECT_DIR$/admin/userDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/util.php" afterPath="$PROJECT_DIR$/admin/util.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/casadiessel.sql" afterPath="$PROJECT_DIR$/casadiessel.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -81,106 +80,27 @@
       </PATH_ELEMENT>
     </PATH>
   </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="util.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/admin/util.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="118">
-                    <caret line="121" column="22" lean-forward="true" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
-                    <folding>
-                      <marker date="1489377389563" expanded="true" signature="1114:1152" ph="SELECT id, n... usuario" />
-                      <marker date="1489377389563" expanded="true" signature="1261:1318" ph="SELECT id, n... usuario" />
-                      <marker date="1489377389563" expanded="true" signature="1261:1399" ph="SELECT id, n... " />
-                      <marker date="1489377389563" expanded="true" signature="1342:1399" ph="SELECT id, n... usuario" />
-                      <marker date="1489377389563" expanded="true" signature="1478:1536" ph="SELECT id, n... producto" />
-                      <marker date="1489377389563" expanded="true" signature="1648:1725" ph="SELECT id, n... producto" />
-                      <marker date="1489377389563" expanded="true" signature="1648:2031" ph="SELECT id, n... " />
-                      <marker date="1489377389563" expanded="true" signature="1749:1826" ph="SELECT id, n... producto" />
-                      <marker date="1489377389563" expanded="true" signature="1850:1926" ph="SELECT id, n... producto" />
-                      <marker date="1489377389563" expanded="true" signature="1950:2031" ph="SELECT id, n... producto" />
-                      <marker date="1489377389563" expanded="true" signature="2107:2124" ph="SELECT * FRO... rol" />
-                      <marker date="1489377389563" expanded="true" signature="2200:2224" ph="SELECT * FRO... maquinaria" />
-                      <marker date="1489377389563" expanded="true" signature="2294:2312" ph="SELECT * FRO... tipo" />
-                      <marker date="1489377389563" expanded="true" signature="2381:2410" ph="DELETE FROM " />
-                      <marker date="1489377389563" expanded="true" signature="2381:2411" ph="DELETE FROM " />
-                      <marker date="1489377389563" expanded="true" signature="2495:2526" ph="SELECT * FRO... usuario" />
-                      <marker date="1489377389563" expanded="true" signature="2608:2678" ph="INSERT INTO usuario... " />
-                      <marker date="1489377389563" expanded="true" signature="2608:2756" ph="INSERT INTO usuario... " />
-                      <marker date="1489377389563" expanded="true" signature="2608:2757" ph="INSERT INTO usuario... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2844" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2851" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2853" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2862" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2873" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2884" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2885" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2905" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2912" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2913" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2914" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2915" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2942" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2825:2971" ph="UPDATE usuar... " />
-                      <marker date="1489377389563" expanded="true" signature="2831:2844" ph="INSERT INTO usuario... " />
-                      <marker date="1489377389563" expanded="true" signature="3056:3087" ph="DELETE FROM " />
-                      <marker date="1489377389563" expanded="true" signature="3174:3206" ph="SELECT * FRO... producto" />
-                      <marker date="1489377389563" expanded="true" signature="3291:3589" ph="INSERT INTO producto... " />
-                      <marker date="1489377389563" expanded="true" signature="3661:3951" ph="UPDATE produ... " />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/admin/user.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="387">
-                    <caret line="168" column="28" lean-forward="true" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="userDetail.html" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/admin/userDetail.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="443">
-                    <caret line="189" column="4" lean-forward="true" selection-start-line="189" selection-start-column="4" selection-end-line="205" selection-end-column="5" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="casaDiessel" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sb-admin.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/css/sb-admin.css">
+      <file leaf-file-name="util.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/util.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="330">
+              <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/console.sql">
+      <file leaf-file-name="sb-admin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/css/sb-admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -189,63 +109,38 @@
       <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="1650">
               <caret line="110" column="98" lean-forward="true" selection-start-line="110" selection-start-column="98" selection-end-line="110" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productDetail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productDetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/productDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="255" column="45" lean-forward="true" selection-start-line="255" selection-start-column="45" selection-end-line="255" selection-end-column="45" />
+            <state relative-caret-position="265">
+              <caret line="244" column="117" lean-forward="false" selection-start-line="244" selection-start-column="117" selection-end-line="244" selection-end-column="117" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="casadiessel.producto" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.producto">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="55" column="7" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="casadiessel.tipo" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.tipo">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="casadiessel.maquinaria" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.maquinaria">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="69" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -287,6 +182,7 @@
       <find>myModal</find>
       <find>findProductById</find>
       <find>userTitle</find>
+      <find>getAllMaquinarias</find>
     </findStrings>
     <replaceStrings>
       <replace>1vw</replace>
@@ -321,6 +217,7 @@
         <option value="$PROJECT_DIR$/admin/userDetail.html" />
         <option value="$PROJECT_DIR$/admin/util.php" />
         <option value="$PROJECT_DIR$/admin/productDetail.html" />
+        <option value="$PROJECT_DIR$/admin/login.html" />
       </list>
     </option>
   </component>
@@ -337,10 +234,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="2048" />
+    <option name="height" value="1152" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -367,7 +262,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="casaDiessel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -377,11 +272,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="casaDiessel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -391,15 +286,55 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="casaDiessel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -432,7 +367,19 @@
       <recent name="C:\xampp\htdocs\casaDiessel\velocity" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Web Application.Unnamed">
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -445,22 +392,10 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -495,9 +430,6 @@
     <configuration default="false" name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="php" start_url="/casaDiessel">
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="PHP Web Application.Unnamed" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -521,6 +453,7 @@
       <workItem from="1489345729235" duration="1983000" />
       <workItem from="1489351971011" duration="31000" />
       <workItem from="1489363947702" duration="14724000" />
+      <workItem from="1489411953015" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="hidden background color in nav bar">
       <created>1487640821837</created>
@@ -638,17 +571,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60518000" />
+    <option name="totallyTimeSpent" value="64612000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="2048" height="1152" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19062027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19042921" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15733737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13231198" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -656,12 +587,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2569558" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37165356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15733737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -716,14 +649,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css" />
     <entry file="file://$PROJECT_DIR$/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/bootstrap.js" />
     <entry file="file://$PROJECT_DIR$/main.js" />
@@ -870,161 +795,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.usuario" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/console.sql" />
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.rol" />
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.producto" />
     <entry file="dbDummy://dbtable:/c3886755/9dd19cb3-ac38-43e4-916e-262eb6b90d1e/casadiessel.tipo" />
-    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.usuario">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.usuario" />
     <entry file="file://$PROJECT_DIR$/admin/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="1650">
           <caret line="110" column="98" lean-forward="true" selection-start-line="110" selection-start-column="98" selection-end-line="110" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.tipo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.maquinaria">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.tipo" />
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.maquinaria" />
     <entry file="file://$PROJECT_DIR$/admin/css/sb-admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="150">
           <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/console.sql" />
+    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.producto" />
     <entry file="file://$PROJECT_DIR$/admin/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
+        <state relative-caret-position="461">
           <caret line="168" column="28" lean-forward="true" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/4f4d9f00-96ba-45b7-85d0-1f4f05d1fea6/casadiessel.producto">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/userDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="189" column="4" lean-forward="true" selection-start-line="189" selection-start-column="4" selection-end-line="205" selection-end-column="5" />
+        <state relative-caret-position="71">
+          <caret line="158" column="25" lean-forward="true" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/util.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="121" column="22" lean-forward="true" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
-          <folding>
-            <marker date="1489377389563" expanded="true" signature="1114:1152" ph="SELECT id, n... usuario" />
-            <marker date="1489377389563" expanded="true" signature="1261:1318" ph="SELECT id, n... usuario" />
-            <marker date="1489377389563" expanded="true" signature="1261:1399" ph="SELECT id, n... " />
-            <marker date="1489377389563" expanded="true" signature="1342:1399" ph="SELECT id, n... usuario" />
-            <marker date="1489377389563" expanded="true" signature="1478:1536" ph="SELECT id, n... producto" />
-            <marker date="1489377389563" expanded="true" signature="1648:1725" ph="SELECT id, n... producto" />
-            <marker date="1489377389563" expanded="true" signature="1648:2031" ph="SELECT id, n... " />
-            <marker date="1489377389563" expanded="true" signature="1749:1826" ph="SELECT id, n... producto" />
-            <marker date="1489377389563" expanded="true" signature="1850:1926" ph="SELECT id, n... producto" />
-            <marker date="1489377389563" expanded="true" signature="1950:2031" ph="SELECT id, n... producto" />
-            <marker date="1489377389563" expanded="true" signature="2107:2124" ph="SELECT * FRO... rol" />
-            <marker date="1489377389563" expanded="true" signature="2200:2224" ph="SELECT * FRO... maquinaria" />
-            <marker date="1489377389563" expanded="true" signature="2294:2312" ph="SELECT * FRO... tipo" />
-            <marker date="1489377389563" expanded="true" signature="2381:2410" ph="DELETE FROM " />
-            <marker date="1489377389563" expanded="true" signature="2381:2411" ph="DELETE FROM " />
-            <marker date="1489377389563" expanded="true" signature="2495:2526" ph="SELECT * FRO... usuario" />
-            <marker date="1489377389563" expanded="true" signature="2608:2678" ph="INSERT INTO usuario... " />
-            <marker date="1489377389563" expanded="true" signature="2608:2756" ph="INSERT INTO usuario... " />
-            <marker date="1489377389563" expanded="true" signature="2608:2757" ph="INSERT INTO usuario... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2844" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2851" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2853" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2862" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2873" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2884" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2885" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2905" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2912" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2913" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2914" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2915" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2942" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2825:2971" ph="UPDATE usuar... " />
-            <marker date="1489377389563" expanded="true" signature="2831:2844" ph="INSERT INTO usuario... " />
-            <marker date="1489377389563" expanded="true" signature="3056:3087" ph="DELETE FROM " />
-            <marker date="1489377389563" expanded="true" signature="3174:3206" ph="SELECT * FRO... producto" />
-            <marker date="1489377389563" expanded="true" signature="3291:3589" ph="INSERT INTO producto... " />
-            <marker date="1489377389563" expanded="true" signature="3661:3951" ph="UPDATE produ... " />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/productDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="255" column="45" lean-forward="true" selection-start-line="255" selection-start-column="45" selection-end-line="255" selection-end-column="45" />
+        <state relative-caret-position="265">
+          <caret line="244" column="117" lean-forward="false" selection-start-line="244" selection-start-column="117" selection-end-line="244" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="69" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="7" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
           <folding />
         </state>
       </provider>

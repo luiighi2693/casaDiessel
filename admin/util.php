@@ -68,6 +68,10 @@ if($_POST['method']=='updateProduct'){
     updateProduct();
 }
 
+if($_POST['method']=='getMaquinariasFromProduct'){
+    getMaquinariasFromProduct();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -146,6 +150,11 @@ function createProduct(){
 
 function updateProduct(){
     $query = 'UPDATE producto SET nombre=\''.$_POST['nombre'].'\', codigo=\''.$_POST['codigo'].'\', descripcion=\''.$_POST['descripcion'].'\', caracteristicas=\''.$_POST['caracteristicas'].'\', marca=\''.$_POST['marca'].'\', referencia=\''.$_POST['referencia'].'\', idTipo= '.$_POST['idTipo'].' WHERE id='.$_POST['id'];
+    executeQuery($query);
+}
+
+function getMaquinariasFromProduct(){
+    $query = 'SELECT idMaquinaria FROM producto_has_maquinaria WHERE idProducto= '.$_POST['id'];
     executeQuery($query);
 }
 

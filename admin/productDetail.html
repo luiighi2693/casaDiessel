@@ -79,26 +79,6 @@
 
                             <div id="checkboxGroup" class="form-group">
                                 <label>Maquinaria</label>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">Tracktor
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">Planta Eléctrica
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">Bote
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">Camión
-                                    </label>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -160,6 +140,7 @@
 <script src="js/plugins/morris/morris-data.js"></script>
 <script>
     setDataType();
+    setDataMachine();
 
     if(getURLParameter("id")==undefined){
         $('#productTitle').text("Producto Nuevo");
@@ -205,6 +186,8 @@
                 $('#marca')[0].value = $.parseJSON(data)[0].marca;
                 $('#referencia')[0].value = $.parseJSON(data)[0].referencia;
                 $('#selectTipo').val($.parseJSON(data)[0].idTipo)
+
+                setCheckboxSelected();
             }
         });
     }
@@ -222,6 +205,44 @@
                 $('#selectTipo').empty();
                 for(var i=0; i<$.parseJSON(data).length; i++){
                     $('#selectTipo').append('<option value="'+$.parseJSON(data)[i].id+'">'+$.parseJSON(data)[i].nombre+'</option>');
+                }
+            }
+        });
+    }
+
+    function setDataMachine() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            async: false,
+            data: {
+                "method" : "getAllMaquinarias"
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#checkboxGroup').append(' <div class="checkbox">' +
+                        '<label>' +
+                        '<input type="checkbox" value="'+$.parseJSON(data)[i].id+'">'+$.parseJSON(data)[i].nombre+'</label>' +
+                        '</div>');
+                }
+            }
+        });
+    }
+
+    function setCheckboxSelected(){
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            async: false,
+            data: {
+                "method" : "getMaquinariasFromProduct",
+                "id" : getURLParameter("id")
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#checkboxGroup').find('input[value='+$.parseJSON(data)[i].idMaquinaria+']')[0].checked = true;
                 }
             }
         });
