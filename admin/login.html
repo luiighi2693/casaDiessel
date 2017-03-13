@@ -27,21 +27,40 @@
                     <form accept-charset="UTF-8" role="form">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="username" name="username" type="text">
+                                <input id="username" class="form-control" placeholder="username" name="username" type="text">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                <input id="password" class="form-control" placeholder="Password" name="password" type="password" value="">
                             </div>
                             <!--<div class="checkbox">
                                 <label>
                                     <input name="remember" type="checkbox" value="Remember Me"> Remember Me
                                 </label>
                             </div>-->
-                            <input class="btn btn-sm btn-success btn-block" type="submit" value="ingresar">
-                            <input class="btn btn-sm btn-danger btn-block" type="submit" value="Regresar">
+                            <input class="btn btn-sm btn-success btn-block" type="button" value="ingresar" onclick="login();">
+                            <input class="btn btn-sm btn-danger btn-block" type="button" value="Regresar"  onclick="getHome();">
                         </fieldset>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Atención</h4>
+            </div>
+            <div class="modal-body">
+                <p>Usuario y/o clave incorrecto</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">aceptar</button>
             </div>
         </div>
     </div>
@@ -52,5 +71,34 @@
 <script src="js/plugins/morris/raphael.min.js"></script>
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
+<script>
+    function login() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "findUserByUsernameAndPassword",
+                "username" : $('#username')[0].value,
+                "clave" : $('#password')[0].value
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                if($.parseJSON(data).length==0){
+                    $('#myModal').modal('show');
+                    $('#username')[0].value = "";
+                    $('#password')[0].value = "";
+                }else{
+                    window.sessionStorage.setItem("username", $.parseJSON(data)[0].nombre);
+                    window.sessionStorage.setItem("idRol", $.parseJSON(data)[0].idRol);
+                    window.location = "index.html";
+                }
+            }
+        });
+    }
+
+    function getHome() {
+        window.location = "../index.html";
+    }
+</script>
 </body>
 </html>

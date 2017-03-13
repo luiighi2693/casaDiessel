@@ -28,17 +28,21 @@
         </div>
         <ul class="nav navbar-right top-nav">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i>
+                    <span id="sessionName"></span>
+                    <b class="caret"></b>
+                </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        <a href="#" onclick="logout();"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                     </li>
                 </ul>
             </li>
         </ul>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active">
+                <li id="users" class="active">
                     <a href="user.html"><i class="fa fa-fw fa-user"></i> Usuarios</a>
                 </li>
                 <li>
@@ -121,6 +125,22 @@
 <script src="js/plugins/morris/morris-data.js"></script>
 <script>
     var selectIdForDelete = null;
+
+    if(window.sessionStorage.getItem("username")!=null){
+        $('#sessionName').text(window.sessionStorage.getItem("username"));
+        if(window.sessionStorage.getItem("idRol")!="1"){
+            $('#users').hide()
+        }
+    }else{
+        alert("debe iniciar sesión");
+        window.location = "login.html";
+    }
+
+    function logout(){
+        window.sessionStorage.removeItem("idRol");
+        window.sessionStorage.removeItem("username");
+        window.location = "login.html";
+    }
 
     function getAll() {
         jQuery.ajax({

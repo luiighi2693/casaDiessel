@@ -72,6 +72,10 @@ if($_POST['method']=='getMaquinariasFromProduct'){
     getMaquinariasFromProduct();
 }
 
+if($_POST['method']=='findUserByUsernameAndPassword'){
+    findUserByUsernameAndPassword();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -155,6 +159,11 @@ function updateProduct(){
 
 function getMaquinariasFromProduct(){
     $query = 'SELECT idMaquinaria FROM producto_has_maquinaria WHERE idProducto= '.$_POST['id'];
+    executeQuery($query);
+}
+
+function findUserByUsernameAndPassword(){
+    $query = 'SELECT * FROM usuario WHERE nombre= \''.$_POST['username'].'\' AND clave= \''.$_POST['clave'].'\'';
     executeQuery($query);
 }
 
