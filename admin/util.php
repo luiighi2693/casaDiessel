@@ -56,6 +56,18 @@ if($_POST['method']=='deleteProduct'){
     deleteProduct();
 }
 
+if($_POST['method']=='findProductById'){
+    findProductById();
+}
+
+if($_POST['method']=='createProduct'){
+    createProduct();
+}
+
+if($_POST['method']=='updateProduct'){
+    updateProduct();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -119,6 +131,21 @@ function updateUser(){
 
 function deleteProduct(){
     $query = 'DELETE FROM producto WHERE id= '.$_POST['id'];
+    executeQuery($query);
+}
+
+function findProductById(){
+    $query = 'SELECT * FROM producto WHERE id='.$_POST['id'];
+    executeQuery($query);
+}
+
+function createProduct(){
+    $query = 'INSERT INTO producto (nombre, codigo, descripcion, marca, idTipo, caracteristicas, referencia)  VALUES (\''.$_POST['nombre'].'\', \''.$_POST['codigo'].'\', \''.$_POST['descripcion'].'\', \''.$_POST['marca'].'\', '.$_POST['idTipo'].', \''.$_POST['caracteristicas'].'\', \''.$_POST['referencia'].'\')';
+    executeQuery($query);
+}
+
+function updateProduct(){
+    $query = 'UPDATE producto SET nombre=\''.$_POST['nombre'].'\', codigo=\''.$_POST['codigo'].'\', descripcion=\''.$_POST['descripcion'].'\', caracteristicas=\''.$_POST['caracteristicas'].'\', marca=\''.$_POST['marca'].'\', referencia=\''.$_POST['referencia'].'\', idTipo= '.$_POST['idTipo'].' WHERE id='.$_POST['id'];
     executeQuery($query);
 }
 

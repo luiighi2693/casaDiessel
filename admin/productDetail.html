@@ -52,34 +52,32 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">
-                        Producto Nuevo/Detalle
-                    </h1>
+                    <h1 id="productTitle" class="page-header"></h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form role="form">
+                    <form id="form" role="form">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input class="form-control">
+                                <input id="nombre" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label>Código</label>
-                                <input class="form-control">
+                                <input id="codigo" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Caracteristicas</label>
-                                <input class="form-control">
+                                <input id="caracteristicas" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Descripción</label>
-                                <textarea class="form-control" rows="3"></textarea>
+                                <textarea id="descripcion" class="form-control" rows="3"></textarea>
                             </div>
 
-                            <div class="form-group">
+                            <div id="checkboxGroup" class="form-group">
                                 <label>Maquinaria</label>
                                 <div class="checkbox">
                                     <label>
@@ -106,20 +104,16 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Marca</label>
-                                <input class="form-control">
+                                <input id="marca" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label>Referencia</label>
-                                <input class="form-control">
+                                <input id="referencia" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Tipo</label>
-                                <select class="form-control">
-                                    <option>Tipo1</option>
-                                    <option selected="selected">Tipo2</option>
-                                    <option>Tipo3</option>
-                                </select>
+                                <select id="selectTipo" class="form-control"></select>
                             </div>
 
                             <div class="form-group">
@@ -132,17 +126,14 @@
                                         <button type="button" class="btn btn-xs btn-danger">Remover</button>
                                     </div>
                                     <div class="form-group">
-                                        <!--<label class="control-label">Seleccione una imagen</label>-->
                                         <input id="input-2" type="file">
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <!--<label class="control-label">Seleccione una imagen</label>-->
                                         <input id="input-3" type="file">
                                     </div>
                                     <div class="form-group">
-                                        <!--<label class="control-label">Seleccione una imagen</label>-->
                                         <input id="input-4" type="file">
                                     </div>
                                 </div>
@@ -150,36 +141,16 @@
                         </div>
                         <div class="col-lg-12">
                             <button type="submit" class="btn btn-default">Aceptar</button>
-                            <button type="reset" class="btn btn-default">Cancelar</button>
+                            <button type="reset" class="btn btn-default">limpiar</button>
+                            <a href="product.html">
+                                <button type="button" class="btn btn-default">Cancelar</button>
+                            </a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Atención</h4>
-                </div>
-                <div class="modal-body">
-                    <p>¿Esta seguro que desea eliminar el elemento seleccionado?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">aceptar</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">cancelar</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
 </div>
 
 <script src="js/jquery.js"></script>
@@ -188,7 +159,114 @@
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
 <script>
+    setDataType();
 
+    if(getURLParameter("id")==undefined){
+        $('#productTitle').text("Producto Nuevo");
+    }else{
+        $('#productTitle').text("Producto Detalle");
+        setDataForm();
+    }
+
+    $( "#form" ).submit(function( event ) {
+        if(getURLParameter("id")==undefined){
+            createProduct();
+        }else{
+            editProduct();
+        }
+        event.preventDefault();
+    });
+
+    function getURLParameter(sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam) {
+                return sParameterName[1];
+            }
+        }
+    }
+
+    function setDataForm() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "findProductById",
+                "id" : getURLParameter("id")
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                $('#nombre')[0].value = $.parseJSON(data)[0].nombre;
+                $('#codigo')[0].value = $.parseJSON(data)[0].codigo;
+                $('#caracteristicas')[0].value = $.parseJSON(data)[0].caracteristicas;
+                $('#descripcion')[0].value = $.parseJSON(data)[0].descripcion;
+                $('#marca')[0].value = $.parseJSON(data)[0].marca;
+                $('#referencia')[0].value = $.parseJSON(data)[0].referencia;
+                $('#selectTipo').val($.parseJSON(data)[0].idTipo)
+            }
+        });
+    }
+
+    function setDataType() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            async: false,
+            data: {
+                "method" : "getAllTipos"
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                $('#selectTipo').empty();
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#selectTipo').append('<option value="'+$.parseJSON(data)[i].id+'">'+$.parseJSON(data)[i].nombre+'</option>');
+                }
+            }
+        });
+    }
+
+    function createProduct() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "createProduct",
+                "nombre" : $('#nombre')[0].value,
+                "codigo" : $('#codigo')[0].value,
+                "descripcion" : $('#descripcion')[0].value,
+                "caracteristicas" : $('#caracteristicas')[0].value,
+                "marca" : $('#marca')[0].value,
+                "referencia" : $('#referencia')[0].value,
+                "idTipo" : $('#selectTipo').val()
+            },
+            success: function(data){
+                window.location = "product.html";
+            }
+        });
+    }
+
+    function editProduct() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "updateProduct",
+                "id" : getURLParameter("id"),
+                "nombre" : $('#nombre')[0].value,
+                "codigo" : $('#codigo')[0].value,
+                "descripcion" : $('#descripcion')[0].value,
+                "caracteristicas" : $('#caracteristicas')[0].value,
+                "marca" : $('#marca')[0].value,
+                "referencia" : $('#referencia')[0].value,
+                "idTipo" : $('#selectTipo').val()
+            },
+            success: function(data){
+                window.location = "product.html";
+            }
+        });
+    }
 </script>
 </body>
 </html>
