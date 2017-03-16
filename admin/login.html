@@ -14,7 +14,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body id="body">
 
 <div class="container">
     <div class="row">
@@ -72,6 +72,13 @@
 <script src="js/plugins/morris/morris.min.js"></script>
 <script src="js/plugins/morris/morris-data.js"></script>
 <script>
+    $('#body').css("background-image", "url(../img/pexels-photo-313543.jpeg)");
+    $('#body').css("background-size", "cover");
+    $('#body').css("background-repeat", "no-repeat");
+    $('#body').css("background-position", "center center");
+    $('#body').css("overflow", "hidden");
+    $('#body').css("background-color", "black");
+
     function login() {
         jQuery.ajax({
             type: "POST",

@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Velocity.js  fullscreen flexbox overlay navigation</title>
+  <title>Casa Diessel</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
@@ -19,7 +19,7 @@
     <ul>
       <li style="flex-basis: 34%;"><a href="productos.html" style="font-size: 2rem;" data-content="The beginning">Productos</a></li>
       <li style="flex-basis: 34%;"><a href="contacto.html" style="font-size: 2rem;" data-content="Curious?">Contactos</a></li>
-      <li style="flex-basis: 34%;"><a href="#" style="font-size: 2rem;" data-content="I got game">Login</a></li>
+      <li style="flex-basis: 34%;"><a href="admin/login.html" style="font-size: 2rem;" data-content="I got game">Login</a></li>
     </ul>
   </nav>
 </div>
@@ -67,18 +67,30 @@
 <script>
   var cont = 2;
   window.setInterval(function(){
-      if(cont == 2){
-          $('.home').css("background-image", "url(img/disel.jpg)");
-      }
-
       if(cont == 1){
-          $('.home').css("background-image", "url(img/intro-bg.jpg)");
+          $('.home').css("background-image", "url(img/copia2.jpeg)");
       }
 
       if(cont == 2){
+          $('.home').css("background-image", "url(img/copia1.jpeg)");
+      }
+
+      if(cont == 3){
+          $('.home').css("background-image", "url(img/pexels-photo-102723.jpeg)");
+      }
+
+      if(cont == 4){
+          $('.home').css("background-image", "url(img/pexels-photo-188679.jpeg)");
+      }
+
+      if(cont == 5){
+          $('.home').css("background-image", "url(img/pexels-photo-211974.jpeg)");
+      }
+
+      if(cont == 5){
           cont = 1;
       }else{
-          cont = 2;
+          cont++;
       }
   }, 6000);
 

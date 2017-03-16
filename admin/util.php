@@ -4,6 +4,7 @@
  * User: luisc
  * Date: 16/11/2016
  * Time: 11:31 PM
+ * Content-Type : application/x-www-form-urlencoded
  */
 
 $mysqli = new mysqli("localhost", "root", "", "casadiessel");
