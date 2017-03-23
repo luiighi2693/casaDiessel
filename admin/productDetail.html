@@ -194,8 +194,9 @@
             createProduct();
         }else{
             checkImages(getURLParameter("id"));
+            deleteMachines(getURLParameter("id"));
+            addMachines(getURLParameter("id"));
             editProduct();
-
         }
         event.preventDefault();
     });
@@ -312,6 +313,7 @@
             },
             success: function(data){
                 checkImages($.parseJSON(data).id);
+                addMachines($.parseJSON(data).id);
                 window.location = "product.html";
             }
         });
@@ -440,6 +442,43 @@
                 "method" : "deleteImage",
                 "id" : id,
                 "productId" : productId
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
+    function deleteMachines(id) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "deleteMaquineFromProduct",
+                "id" : id
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
+    function addMachines(id) {
+        for(var i=0; i<$( "input[type=checkbox]:checked:enabled" ).length;i++){
+            addMachine($( "input[type=checkbox]:checked:enabled" )[i].value, id);
+        }
+    }
+
+    function addMachine(idMachine, idProducto) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "deleteMaquineFromProduct",
+                "idProducto" : idProducto,
+                "idMaquinaria" : idMachine
             },
             async: false,
             success: function(data){

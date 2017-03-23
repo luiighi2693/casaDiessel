@@ -93,6 +93,14 @@ if($_POST['method']=='deletePhotosByProduct'){
     deletePhotosByProduct();
 }
 
+if($_POST['method']=='deleteMaquineFromProduct'){
+    deleteMaquineFromProduct();
+}
+
+if($_POST['method']=='addMaquineFromProduct'){
+    addMaquineFromProduct();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -201,6 +209,16 @@ function deleteImage(){
 
 function deletePhotosByProduct(){
     $query = 'DELETE FROM fotos WHERE idProducto= '.$_POST['id'];
+    executeQuery($query);
+}
+
+function deleteMaquineFromProduct(){
+    $query = 'DELETE FROM producto_has_maquinaria WHERE idProducto= '.$_POST['id'];
+    executeQuery($query);
+}
+
+function addMaquineFromProduct(){
+    $query = 'INSERT INTO producto_has_maquinaria (idProducto, idMaquinaria) VALUES ('.$_POST['idProducto'].', '.$_POST['idMaquinaria'].')';
     executeQuery($query);
 }
 
