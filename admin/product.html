@@ -186,6 +186,8 @@
     }
 
     function deleteProduct() {
+        deleteImagesInServer();
+        deletePhotosByProduct();
         jQuery.ajax({
             type: "POST",
             url: "util.php",
@@ -220,6 +222,52 @@
         }
     }
 
+    function deletePhotosByProduct() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "deletePhotosByProduct",
+                "id" : selectIdForDelete
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
+    function deleteImagesInServer() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method": "findImagesByIdProduct",
+                "id": selectIdForDelete
+            },
+            async: false,
+            success: function (data) {
+                console.log($.parseJSON(data));
+                for (var i = 0; i < $.parseJSON(data).length; i++) {
+                    deleteImageInServer($.parseJSON(data)[i].fecha+$.parseJSON(data)[i].nombre);
+                }
+            }
+        });
+    }
+
+    function deleteImageInServer(imageName) {
+        jQuery.ajax({
+            type: "POST",
+            url: "delete.php",
+            data: {
+                "image" : imageName
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
     getAll();
 </script>
 </body>

@@ -77,6 +77,22 @@ if($_POST['method']=='findUserByUsernameAndPassword'){
     findUserByUsernameAndPassword();
 }
 
+if($_POST['method']=='saveImage'){
+    saveImage();
+}
+
+if($_POST['method']=='findImagesByIdProduct'){
+    findImagesByIdProduct();
+}
+
+if($_POST['method']=='deleteImage'){
+    deleteImage();
+}
+
+if($_POST['method']=='deletePhotosByProduct'){
+    deletePhotosByProduct();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -168,18 +184,46 @@ function findUserByUsernameAndPassword(){
     executeQuery($query);
 }
 
+function saveImage(){
+    $query = 'INSERT INTO fotos (idProducto, nombre, fecha, id) VALUES ('.$_POST['idProducto'].', \''.$_POST['nombre'].'\', \''.$_POST['fecha'].'\', '.$_POST['id'].')';
+    executeQuery($query);
+}
+
+function findImagesByIdProduct(){
+    $query = 'SELECT * FROM fotos WHERE idProducto='.$_POST['id'];
+    executeQuery($query);
+}
+
+function deleteImage(){
+    $query = 'DELETE FROM fotos WHERE id= '.$_POST['id'].' AND idProducto='.$_POST['productId'];
+    executeQuery($query);
+}
+
+function deletePhotosByProduct(){
+    $query = 'DELETE FROM fotos WHERE idProducto= '.$_POST['id'];
+    executeQuery($query);
+}
+
 function executeQuery($query){
     global $mysqli;
     $result = $mysqli->query($query);
 
     $array = array();
+    error_reporting(E_ERROR | E_PARSE);
 
-    for ($i = 0; $i < $result->num_rows; $i++) {
-        array_push($array,$result->fetch_array(MYSQLI_ASSOC));
+    if($result->num_rows ==null){
+        $arr = array('id' => $mysqli->insert_id);
+        $response = json_encode($arr);
+    }else{
+        for ($i = 0; $i < $result->num_rows; $i++) {
+            array_push($array,$result->fetch_array(MYSQLI_ASSOC));
+        }
+        $response = json_encode($array);
     }
 
     mysqli_free_result($result);
     $mysqli->close();
 
-    echo json_encode($array);
+
+    echo $response;
 }

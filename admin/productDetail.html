@@ -106,8 +106,15 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <img class="img-thumbnail" src="https://repocci.files.wordpress.com/2014/02/1379619130_547408139_1-fotos-de-repuestos-para-motos-chinas-bera-skygo-star-md-y-otras-mas.jpg" width="150px" height="150px">
-                                        <button type="button" class="btn btn-xs btn-danger">Remover</button>
+                                        <img id="image-1" class="img-thumbnail" src="" width="150px" height="150px">
+                                        <button id="deleteBtn1" type="button" class="btn btn-xs btn-danger">Remover</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="input-1" type="file">
+                                    </div>
+                                    <div class="form-group">
+                                        <img id="image-2" class="img-thumbnail" src="" width="150px" height="150px">
+                                        <button id="deleteBtn2" type="button" class="btn btn-xs btn-danger">Remover</button>
                                     </div>
                                     <div class="form-group">
                                         <input id="input-2" type="file">
@@ -115,7 +122,15 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
+                                        <img id="image-3" class="img-thumbnail" src="" width="150px" height="150px">
+                                        <button id="deleteBtn3" type="button" class="btn btn-xs btn-danger">Remover</button>
+                                    </div>
+                                    <div class="form-group">
                                         <input id="input-3" type="file">
+                                    </div>
+                                    <div class="form-group">
+                                        <img id="image-4" class="img-thumbnail" src="" width="150px" height="150px">
+                                        <button id="deleteBtn4" type="button" class="btn btn-xs btn-danger">Remover</button>
                                     </div>
                                     <div class="form-group">
                                         <input id="input-4" type="file">
@@ -153,6 +168,15 @@
         window.location = "login.html";
     }
 
+    $('#image-1').hide();
+    $('#image-2').hide();
+    $('#image-3').hide();
+    $('#image-4').hide();
+    $('#deleteBtn1').hide();
+    $('#deleteBtn2').hide();
+    $('#deleteBtn3').hide();
+    $('#deleteBtn4').hide();
+
     setDataType();
     setDataMachine();
 
@@ -161,13 +185,17 @@
     }else{
         $('#productTitle').text("Producto Detalle");
         setDataForm();
+        setImages();
     }
 
     $( "#form" ).submit(function( event ) {
+
         if(getURLParameter("id")==undefined){
             createProduct();
         }else{
+            checkImages(getURLParameter("id"));
             editProduct();
+
         }
         event.preventDefault();
     });
@@ -283,6 +311,7 @@
                 "idTipo" : $('#selectTipo').val()
             },
             success: function(data){
+                checkImages($.parseJSON(data).id);
                 window.location = "product.html";
             }
         });
@@ -305,6 +334,116 @@
             },
             success: function(data){
                 window.location = "product.html";
+            }
+        });
+    }
+
+    function checkImages(idProduct) {
+        var date  = new Date();
+        for(var i=0; i<4; i++){
+            if($('#input-'+(i+1)).prop('files')[0]!=null){
+                var file_data = $('#input-'+(i+1)).prop('files')[0];
+                var form_data = new FormData();
+                form_data.append('file', file_data);
+                saveImageInServer(date.getTime(), form_data);
+               saveImageInDatabase(idProduct,i+1, file_data.name, date.getTime());
+            }
+        }
+    }
+
+    function saveImageInServer(time, form_data) {
+        $.ajax({
+            url: 'upload.php?date='+time,
+            dataType: 'text',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: form_data,
+            type: 'post',
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
+    function saveImageInDatabase(idProduct, id, imageName, time) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "saveImage",
+                "id" : id,
+                "idProducto" : idProduct,
+                "nombre" : imageName,
+                "fecha" : time
+            },
+            async: false,
+            success: function(data){
+               console.log(data);
+            }
+        });
+    }
+
+    function setImages() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "findImagesByIdProduct",
+                "id" : getURLParameter("id")
+            },
+            async: false,
+            success: function(data){
+                console.log($.parseJSON(data));
+                for(var i = 0; i< $.parseJSON(data).length; i++){
+                    console.log($.parseJSON(data)[i]);
+                    $('#image-'+$.parseJSON(data)[i].id)
+                        .attr("src","../img/uploads/"+$.parseJSON(data)[i].fecha+$.parseJSON(data)[i].nombre)
+                        .show();
+                    $('#deleteBtn'+$.parseJSON(data)[i].id)
+                        .attr("onclick", "deleteImage("+$.parseJSON(data)[i].idProducto+","+$.parseJSON(data)[i].id+", '"+($.parseJSON(data)[i].fecha+$.parseJSON(data)[i].nombre)+"');")
+                        .show();
+                    $('#input-'+$.parseJSON(data)[i].id).hide();
+                }
+            }
+        });
+    }
+
+    function deleteImage(productId, id, imageName) {
+        deleteImageInServer(imageName);
+        deleteImageInDataBase(productId, id);
+        $('#image-'+id).hide();
+        $('#deleteBtn'+id).hide();
+        $('#input-'+id).show();
+    }
+
+    function deleteImageInServer(imageName) {
+        jQuery.ajax({
+            type: "POST",
+            url: "delete.php",
+            data: {
+                "image" : imageName
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
+    function deleteImageInDataBase(productId, id) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "deleteImage",
+                "id" : id,
+                "productId" : productId
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
             }
         });
     }
