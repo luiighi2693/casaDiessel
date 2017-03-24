@@ -53,6 +53,11 @@
         </div>
     </div>
 
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="productos.html">Productos</a></li>
+        <li id="breadCrumActual" class="breadcrumb-item active"></li>
+    </ol>
     <div class="row" style="text-align: center;padding-top: 5%;color: white;">
         <div style="display: flex;">
             <div style="width: 50%; text-align: center; padding-left: 5%; color: black;">
@@ -200,6 +205,7 @@
             success: function(data){
                 console.log($.parseJSON(data));
                 $('#nombre').text($.parseJSON(data)[0].nombre);
+                $('#breadCrumActual').text($.parseJSON(data)[0].nombre);
                 $('#codigo').text($.parseJSON(data)[0].codigo);
                 $('#caracteristicas').text($.parseJSON(data)[0].caracteristicas);
                 $('#descripcion').text($.parseJSON(data)[0].descripcion);
