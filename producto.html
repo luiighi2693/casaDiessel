@@ -10,13 +10,14 @@
     <meta name="description" content="Casa Diesel, C.A. es una compañia dedicada a la venta de repuestos de tipo inyeccion para tractores, plantas electricas, camiones y botes">
     <title>Casa Diesel, C.A.</title>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img/logo.png" />
-    
+
 </head>
 
 <body>
@@ -24,17 +25,17 @@
     <nav role="navigation">
         <ul>
             <li style="flex-basis: 34%;"><a href="index.html" style="font-size: 2rem;" data-content="Volver">Inicio</a></li>
-      <li style="flex-basis: 34%;"><a href="productos.html" style="font-size: 2rem;" data-content="Full Inyección">Productos</a></li>
-      <li style="flex-basis: 34%;"><a href="contacto.html" style="font-size: 2rem;" data-content="Escríbenos">Contacto</a></li>
-      <li style="flex-basis: 34%;"><a href="admin/login.html" style="font-size: 2rem;" data-content="Sólo Personal">Login</a></li>
+            <li style="flex-basis: 34%;"><a href="productos.html" style="font-size: 2rem;" data-content="Full Inyección">Productos</a></li>
+            <li style="flex-basis: 34%;"><a href="contacto.html" style="font-size: 2rem;" data-content="Escríbenos">Contacto</a></li>
+            <li style="flex-basis: 34%;"><a href="admin/login.html" style="font-size: 2rem;" data-content="Sólo Personal">Login</a></li>
         </ul>
     </nav>
 </div>
 
-<section class="home">
+<section class="">
     <div style="display: flex; margin: 2%;">
         <div style="height: 10%;width: 15%;">
-        <a href="index.html" class="linkFixed"><img src="img/logo.png" class="img-responsive" href="index.html"></a>
+            <a href="index.html" class="linkFixed"><img src="img/logo.png" class="img-responsive" href="index.html"></a>
         </div>
 
         <div class="input-group" style="width: 70%; padding-left: 10%">
@@ -55,53 +56,150 @@
     <div class="row" style="text-align: center;padding-top: 5%;color: white;">
         <div style="display: flex;">
             <div style="width: 50%; text-align: center; padding-left: 5%; color: black;">
-                <img src="img/toyota.jpg" class="img-responsive" alt="">
+                <div id="mainImage" style="width: 100%;">
+                    <img src="img/no-img.jpg" class="img-responsive" alt="">
+                </div>
+                <div style="width: 100%;display: flex;margin: 3%;">
+                    <div id="image-1" style="width: 20%;margin-right: 3%;cursor: pointer;">
+                        <img src="img/no-img.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div id="image-2" style="width: 20%;margin-right: 3%;cursor: pointer;">
+                        <img src="img/no-img.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div id="image-3" style="width: 20%;margin-right: 3%;cursor: pointer;">
+                        <img src="img/no-img.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div id="image-4" style="width: 20%;margin-right: 3%;cursor: pointer;">
+                        <img src="img/no-img.jpg" class="img-responsive" alt="">
+                    </div>
+                </div>
             </div>
-            <div style="width: 50%; text-align: left; padding-left: 5%;">
-                <h1>Item</h1>
-                <h5>ID Code #</h5>
-                <h1 style="padding-top: 4%;">Descripción</h1>
+            <div style="width: 50%; text-align: left; padding-left: 5%; color: black;">
+                <h1 id="nombre"></h1>
+                <h4 style="padding-top: 2%;">Codigo: <span id="codigo"></span></h4>
+                <h4 style="padding-top: 2%;">Marca: <span id="marca"></span></h4>
+                <h4 style="padding-top: 2%;">Caracteristicas: <span id="caracteristicas"></span></h4>
+                <h4 style="padding-top: 2%;">Descripción: <span id="descripcion"></span></h4>
+                <h4 style="padding-top: 2%;">Maquinaria: <span id="maquinaria"></span></h4>
             </div>
         </div>
     </div>
 </section>
 
 <script src='js/jquery.min.js'></script>
+<script src='js/jquery.elevatezoom.js'></script>
 <script src='js/velocity.min.js'></script>
 <script src='js/velocity.ui.min.js'></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/index.js"></script>
 <script>
-    var cont = 2;
-    window.setInterval(function(){
-        if(cont == 1){
-            $('.home').css("background-image", "url(img/copia2.jpg)");
-        }
+    $('.dropdown-toggle').dropdown();
+//    $('.home').css("overflow", "auto");
+//    $('.home').css("background-color", "white");
 
-        if(cont == 2){
-            $('.home').css("background-image", "url(img/copia1.jpg)");
-        }
+    $('#image-1 img').hide();
+    $('#image-2 img').hide();
+    $('#image-3 img').hide();
+    $('#image-4 img').hide();
 
-        if(cont == 3){
-            $('.home').css("background-image", "url(img/pexels-photo-102723.jpg)");
-        }
+    setProduct();
+    setMachines();
+    setImages();
 
-        if(cont == 4){
-            $('.home').css("background-image", "url(img/pexels-photo-188679.jpg)");
+    function getURLParameter(sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam) {
+                return sParameterName[1];
+            }
         }
+    }
 
-        if(cont == 5){
-            $('.home').css("background-image", "url(img/pexels-photo-211974.jpg)");
-        }
+    function setProduct() {
+        jQuery.ajax({
+            type: "POST",
+            url: "admin/util.php",
+            data: {
+                "method" : "findProductById",
+                "id" : getURLParameter("id")
+            },
+            async: false,
+            success: function(data){
+                console.log($.parseJSON(data));
+                $('#nombre').text($.parseJSON(data)[0].nombre);
+                $('#codigo').text($.parseJSON(data)[0].codigo);
+                $('#caracteristicas').text($.parseJSON(data)[0].caracteristicas);
+                $('#descripcion').text($.parseJSON(data)[0].descripcion);
+                $('#marca').text($.parseJSON(data)[0].marca);
+            }
+        });
+    }
 
-        if(cont == 5){
-            cont = 1;
-        }else{
-            cont++;
-        }
-    }, 6000);
+    function setMachines() {
+        jQuery.ajax({
+            type: "POST",
+            url: "admin/util.php",
+            data: {
+                "method" : "findMaquinariaNamesByProduct",
+                "id" : getURLParameter("id")
+            },
+            async: false,
+            success: function(data){
+                console.log($.parseJSON(data));
+                var result = "";
+                for (var i = 0; i<$.parseJSON(data).length;i++){
+                    result+= $.parseJSON(data)[i].nombre+" ,";
+                }
+                $('#maquinaria').text(result.substring(0, result.length - 1));
+            }
+        });
+    }
+
+    function setImages() {
+        jQuery.ajax({
+            type: "POST",
+            url: "admin/util.php",
+            data: {
+                "method" : "findImagesByIdProduct",
+                "id" : getURLParameter("id")
+            },
+            async: false,
+            success: function(data){
+                console.log($.parseJSON(data));
+                var cont=1;
+                for(var i = 0; i< $.parseJSON(data).length; i++){
+                    console.log($.parseJSON(data)[i]);
+                    $('#image-'+cont+' img')
+                        .attr("src", "img/uploads/"+$.parseJSON(data)[i].fecha+$.parseJSON(data)[i].nombre).show();
+                    $('#image-'+cont)
+                        .attr("onclick", "changeImage('img/uploads/"+$.parseJSON(data)[i].fecha+$.parseJSON(data)[i].nombre+"')");
+                    cont++;
+                }
+                if(cont>1){
+                    changeImage("img/uploads/"+$.parseJSON(data)[0].fecha+$.parseJSON(data)[0].nombre);
+                }
+            }
+        });
+    }
+
+    function changeImage(path) {
+        var img =  $('#mainImage').find('img');
+        img
+            .attr("src", path)
+            .attr("data-zoom-image", path);
+
+        //Remove
+        $('.zoomContainer').remove();
+        img.removeData('elevateZoom');
+        img.removeData('zoomImage');
+
+        img.elevateZoom();
+    }
 
 </script>
 </body>
 </html>
+
 

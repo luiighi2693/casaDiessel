@@ -6,7 +6,7 @@
  * Time: 11:31 PM
  * Content-Type : application/x-www-form-urlencoded
  */
-
+//$mysqli = new mysqli("localhost", "c0490274_casad", "RA80fazope", "c0490274_casad");
 $mysqli = new mysqli("localhost", "root", "", "casadiessel");
 
 if($_POST['method']=='getAllUsers'){
@@ -93,12 +93,16 @@ if($_POST['method']=='deletePhotosByProduct'){
     deletePhotosByProduct();
 }
 
-if($_POST['method']=='deleteMaquineFromProduct'){
-    deleteMaquineFromProduct();
+if($_POST['method']=='deleteMachineFromProduct'){
+    deleteMachineFromProduct();
 }
 
-if($_POST['method']=='addMaquineFromProduct'){
-    addMaquineFromProduct();
+if($_POST['method']=='addMachineFromProduct'){
+    addMachineFromProduct();
+}
+
+if($_POST['method']=='findMaquinariaNamesByProduct'){
+    findMaquinariaNamesByProduct();
 }
 
 function getAllUsers(){
@@ -212,13 +216,20 @@ function deletePhotosByProduct(){
     executeQuery($query);
 }
 
-function deleteMaquineFromProduct(){
+function deleteMachineFromProduct(){
     $query = 'DELETE FROM producto_has_maquinaria WHERE idProducto= '.$_POST['id'];
     executeQuery($query);
 }
 
-function addMaquineFromProduct(){
+function addMachineFromProduct(){
     $query = 'INSERT INTO producto_has_maquinaria (idProducto, idMaquinaria) VALUES ('.$_POST['idProducto'].', '.$_POST['idMaquinaria'].')';
+    executeQuery($query);
+}
+
+function findMaquinariaNamesByProduct(){
+    $query = 'SELECT nombre FROM maquinaria
+      INNER JOIN producto_has_maquinaria ON maquinaria.id = producto_has_maquinaria.idMaquinaria
+      WHERE producto_has_maquinaria.idProducto ='.$_POST['id'];
     executeQuery($query);
 }
 
