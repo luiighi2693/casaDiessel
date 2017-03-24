@@ -4,13 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/admin/product.html" line="251" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f30db70f-60e4-4a7d-9383-a12402a06dd7" name="Default" comment="integra">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/no-img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.elevatezoom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+    <list default="true" id="f30db70f-60e4-4a7d-9383-a12402a06dd7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/productDetail.html" afterPath="$PROJECT_DIR$/admin/productDetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/util.php" afterPath="$PROJECT_DIR$/admin/util.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/producto.html" afterPath="$PROJECT_DIR$/producto.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -115,8 +110,8 @@
       <file leaf-file-name="producto.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/producto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="97" column="50" lean-forward="true" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
+            <state relative-caret-position="197">
+              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -138,6 +133,9 @@
                 <element signature="n#style#0;n#h4#2;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#3;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#4;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5303#5310#0" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -340,8 +338,8 @@
         <option value="$PROJECT_DIR$/admin/productDetail.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/996d2440-fdfe-404b-a8b6-48005ab00b08/console.sql" />
         <option value="$PROJECT_DIR$/admin/util.php" />
-        <option value="$PROJECT_DIR$/producto.html" />
         <option value="&lt;0084ad8f-e4a8-4dbc-9f6e-962ae485833b&gt;/public_html/admin/util.php" />
+        <option value="$PROJECT_DIR$/producto.html" />
       </list>
     </option>
   </component>
@@ -1008,7 +1006,7 @@
       <workItem from="1490304288348" duration="2000" />
       <workItem from="1490304293229" duration="2000" />
       <workItem from="1490304363343" duration="1526000" />
-      <workItem from="1490320848166" duration="12388000" />
+      <workItem from="1490320848166" duration="13361000" />
     </task>
     <task id="LOCAL-00001" summary="hidden background color in nav bar">
       <created>1487640821837</created>
@@ -1150,11 +1148,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490320963015</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="zoom mercadolibre, mejoras en producto detallado">
+      <created>1490333771384</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1490333771384</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113052000" />
+    <option name="totallyTimeSpent" value="114025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1230,7 +1235,8 @@
     <MESSAGE value="integracion de imagenes y mejoras visuales" />
     <MESSAGE value="checkboxes" />
     <MESSAGE value="contenido adicional" />
-    <option name="LAST_COMMIT_MESSAGE" value="contenido adicional" />
+    <MESSAGE value="zoom mercadolibre, mejoras en producto detallado" />
+    <option name="LAST_COMMIT_MESSAGE" value="zoom mercadolibre, mejoras en producto detallado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1867,8 +1873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/producto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="97" column="50" lean-forward="true" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
+        <state relative-caret-position="197">
+          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1890,6 +1896,9 @@
             <element signature="n#style#0;n#h4#2;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#3;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#4;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5303#5310#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
