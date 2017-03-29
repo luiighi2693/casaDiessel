@@ -105,6 +105,10 @@ if($_POST['method']=='findMaquinariaNamesByProduct'){
     findMaquinariaNamesByProduct();
 }
 
+if($_POST['method']=='getFirstImageProduct'){
+    getFirstImageProduct();
+}
+
 function getAllUsers(){
     $query = 'SELECT id, nombre, cedula FROM usuario';
     executeQuery($query);
@@ -230,6 +234,11 @@ function findMaquinariaNamesByProduct(){
     $query = 'SELECT nombre FROM maquinaria
       INNER JOIN producto_has_maquinaria ON maquinaria.id = producto_has_maquinaria.idMaquinaria
       WHERE producto_has_maquinaria.idProducto ='.$_POST['id'];
+    executeQuery($query);
+}
+
+function getFirstImageProduct(){
+    $query = 'SELECT * FROM fotos WHERE idProducto='.$_POST['id'].' ORDER BY id LIMIT 1';
     executeQuery($query);
 }
 
