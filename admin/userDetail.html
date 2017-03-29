@@ -1,105 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>SB Admin - Bootstrap Admin Template</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-<div id="wrapper">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Admin</a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 id="userTitle" class="page-header"></h1>
         </div>
-        <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-user"></i>
-                    <span id="sessionName"></span>
-                    <b class="caret"></b>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <form id="form" role="form">
+                <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input id="nombre" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Cédula</label>
+                    <input id="cedula" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Rol</label>
+                    <select id="selectRole" class="form-control"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Clave</label>
+                    <input id="password" class="form-control" type="password">
+                </div>
+
+                <div class="form-group">
+                    <label>Repita la clave</label>
+                    <input id="confirmPassword" class="form-control" type="password">
+                </div>
+
+                <button type="submit" class="btn btn-default">Aceptar</button>
+                <button type="reset" class="btn btn-default">limpiar</button>
+                <a href="#" onclick="loadModule('user.html')">
+                    <button type="button" class="btn btn-default">Cancelar</button>
                 </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#" onclick="logout();"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li id="users" class="active">
-                    <a href="user.html"><i class="fa fa-fw fa-user"></i> Usuarios</a>
-                </li>
-                <li>
-                    <a href="product.html"><i class="fa fa-fw fa-shopping-cart"></i> Productos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 id="userTitle" class="page-header"></h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <form id="form" role="form">
-                        <div class="form-group">
-                            <label>Nombre de Usuario</label>
-                            <input id="nombre" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Cédula</label>
-                            <input id="cedula" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Rol</label>
-                            <select id="selectRole" class="form-control"></select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Clave</label>
-                            <input id="password" class="form-control" type="password">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Repita la clave</label>
-                            <input id="confirmPassword" class="form-control" type="password">
-                        </div>
-
-                        <button type="submit" class="btn btn-default">Aceptar</button>
-                        <button type="reset" class="btn btn-default">limpiar</button>
-                        <a href="user.html">
-                            <button type="button" class="btn btn-default">Cancelar</button>
-                        </a>
-                    </form>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script>
     if(window.sessionStorage.getItem("username")!=null){
         $('#sessionName').text(window.sessionStorage.getItem("username"));
@@ -140,12 +82,16 @@
     }
 
     function getURLParameter(sParam) {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) {
-                return sParameterName[1];
+        var sPageURL = window.location.hash.split('?')[1];
+        if(sPageURL==undefined){
+            return undefined;
+        }else{
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
             }
         }
     }
@@ -198,7 +144,7 @@
                 "idRol" : $('#selectRole').val()
             },
             success: function(data){
-                window.location = "user.html";
+                loadModule('user.html');
             }
         });
     }
@@ -216,11 +162,9 @@
                 "idRol" : $('#selectRole').val()
             },
             success: function(data){
-                window.location = "user.html";
+                loadModule('user.html');
             }
         });
     }
 
 </script>
-</body>
-</html>

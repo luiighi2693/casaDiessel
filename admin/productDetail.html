@@ -1,158 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>SB Admin - Bootstrap Admin Template</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-<div id="wrapper">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Admin</a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 id="productTitle" class="page-header"></h1>
         </div>
-        <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-user"></i>
-                    <span id="sessionName"></span>
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#" onclick="logout();"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li id="users">
-                    <a href="user.html"><i class="fa fa-fw fa-user"></i> Usuarios</a>
-                </li>
-                <li class="active">
-                    <a href="product.html"><i class="fa fa-fw fa-shopping-cart"></i> Productos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <form id="form" role="form">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input id="nombre" class="form-control">
+                    </div>
 
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 id="productTitle" class="page-header"></h1>
+                    <div class="form-group">
+                        <label>Código</label>
+                        <input id="codigo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Caracteristicas</label>
+                        <input id="caracteristicas" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="descripcion" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div id="checkboxGroup" class="form-group">
+                        <label>Maquinaria</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form id="form" role="form">
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input id="nombre" class="form-control">
-                            </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Marca</label>
+                        <input id="marca" class="form-control">
+                    </div>
 
-                            <div class="form-group">
-                                <label>Código</label>
-                                <input id="codigo" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Caracteristicas</label>
-                                <input id="caracteristicas" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Descripción</label>
-                                <textarea id="descripcion" class="form-control" rows="3"></textarea>
-                            </div>
+                    <div class="form-group">
+                        <label>Referencia</label>
+                        <input id="referencia" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo</label>
+                        <select id="selectTipo" class="form-control"></select>
+                    </div>
 
-                            <div id="checkboxGroup" class="form-group">
-                                <label>Maquinaria</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Marca</label>
-                                <input id="marca" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Referencia</label>
-                                <input id="referencia" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Tipo</label>
-                                <select id="selectTipo" class="form-control"></select>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-lg-12">
-                                    <label>Imagenes</label>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <img id="image-1" class="img-thumbnail" src="" width="150px" height="150px">
-                                        <button id="deleteBtn1" type="button" class="btn btn-xs btn-danger">Remover</button>
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="input-1" type="file">
-                                    </div>
-                                    <div class="form-group">
-                                        <img id="image-2" class="img-thumbnail" src="" width="150px" height="150px">
-                                        <button id="deleteBtn2" type="button" class="btn btn-xs btn-danger">Remover</button>
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="input-2" type="file">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <img id="image-3" class="img-thumbnail" src="" width="150px" height="150px">
-                                        <button id="deleteBtn3" type="button" class="btn btn-xs btn-danger">Remover</button>
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="input-3" type="file">
-                                    </div>
-                                    <div class="form-group">
-                                        <img id="image-4" class="img-thumbnail" src="" width="150px" height="150px">
-                                        <button id="deleteBtn4" type="button" class="btn btn-xs btn-danger">Remover</button>
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="input-4" type="file">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="form-group">
                         <div class="col-lg-12">
-                            <button type="submit" class="btn btn-default">Aceptar</button>
-                            <button type="reset" class="btn btn-default">limpiar</button>
-                            <a href="product.html">
-                                <button type="button" class="btn btn-default">Cancelar</button>
-                            </a>
+                            <label>Imagenes</label>
                         </div>
-                    </form>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <img id="image-1" class="img-thumbnail" src="" width="150px" height="150px">
+                                <button id="deleteBtn1" type="button" class="btn btn-xs btn-danger">Remover</button>
+                            </div>
+                            <div class="form-group">
+                                <input id="input-1" type="file">
+                            </div>
+                            <div class="form-group">
+                                <img id="image-2" class="img-thumbnail" src="" width="150px" height="150px">
+                                <button id="deleteBtn2" type="button" class="btn btn-xs btn-danger">Remover</button>
+                            </div>
+                            <div class="form-group">
+                                <input id="input-2" type="file">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <img id="image-3" class="img-thumbnail" src="" width="150px" height="150px">
+                                <button id="deleteBtn3" type="button" class="btn btn-xs btn-danger">Remover</button>
+                            </div>
+                            <div class="form-group">
+                                <input id="input-3" type="file">
+                            </div>
+                            <div class="form-group">
+                                <img id="image-4" class="img-thumbnail" src="" width="150px" height="150px">
+                                <button id="deleteBtn4" type="button" class="btn btn-xs btn-danger">Remover</button>
+                            </div>
+                            <div class="form-group">
+                                <input id="input-4" type="file">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-default">Aceptar</button>
+                    <button type="reset" class="btn btn-default">limpiar</button>
+                    <a href="#" onclick="loadModule('product.html');">
+                        <button type="button" class="btn btn-default">Cancelar</button>
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script>
     if(window.sessionStorage.getItem("username")!=null){
         $('#sessionName').text(window.sessionStorage.getItem("username"));
@@ -204,12 +146,16 @@
     }
 
     function getURLParameter(sParam) {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) {
-                return sParameterName[1];
+        var sPageURL = window.location.hash.split('?')[1];
+        if(sPageURL==undefined){
+            return undefined;
+        }else{
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
             }
         }
     }
@@ -310,7 +256,7 @@
             success: function(data){
                 checkImages($.parseJSON(data).id);
                 addMachines($.parseJSON(data).id);
-                window.location = "product.html";
+                loadModule('product.html');
             }
         });
     }
@@ -331,7 +277,7 @@
                 "idTipo" : $('#selectTipo').val()
             },
             success: function(data){
-                window.location = "product.html";
+                loadModule('product.html');
             }
         });
     }
@@ -344,7 +290,7 @@
                 var form_data = new FormData();
                 form_data.append('file', file_data);
                 saveImageInServer(date.getTime(), form_data);
-               saveImageInDatabase(idProduct,i+1, file_data.name, date.getTime());
+                saveImageInDatabase(idProduct,i+1, file_data.name, date.getTime());
             }
         }
     }
@@ -378,7 +324,7 @@
             },
             async: false,
             success: function(data){
-               console.log(data);
+                console.log(data);
             }
         });
     }
@@ -483,5 +429,3 @@
         });
     }
 </script>
-</body>
-</html>
