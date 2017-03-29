@@ -162,8 +162,7 @@ INSERT INTO `usuario` (`id`, `nombre`, `cedula`, `clave`, `idRol`) VALUES
 -- Indices de la tabla `fotos`
 --
 ALTER TABLE `fotos`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `foto_id_uindex` (`id`,`idProducto`);
+  ADD PRIMARY KEY (`id`, `idProducto`);
 
 --
 -- Indices de la tabla `maquinaria`

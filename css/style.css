@@ -470,3 +470,19 @@ Animation keyframes
   }
 }
 
+@media (max-width: 768px) {
+  .nameFont{
+    font-size: 3.5vw!important;
+  }
+  .codeFont{
+    font-size: 3vw!important;
+  }
+  .iconSmallFixed{
+    width: 26%!important;
+  }
+  .searchSmallFixed{
+    width: 55%!important;
+    padding-left: 5%!important;
+  }
+}
+
