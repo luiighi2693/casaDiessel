@@ -55,22 +55,6 @@
 <script>
     var selectIdForDelete = null;
 
-    if(window.sessionStorage.getItem("username")!=null){
-        $('#sessionName').text(window.sessionStorage.getItem("username"));
-        if(window.sessionStorage.getItem("idRol")!="1"){
-            $('#users').hide()
-        }
-    }else{
-        alert("debe iniciar sesión");
-        window.location = "login.html";
-    }
-
-    function logout(){
-        window.sessionStorage.removeItem("idRol");
-        window.sessionStorage.removeItem("username");
-        window.location = "login.html";
-    }
-
     function getAll() {
         jQuery.ajax({
             type: "POST",
