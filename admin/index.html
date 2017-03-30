@@ -94,6 +94,24 @@
         }
     }
 
+    function getAll(method, setTable) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : method
+            },
+            async:false,
+            success: function(data){
+                if(setTable=="setTableItemsProduct"){
+                    setTableItemsProduct(data);
+                }else{
+                    setTableItemsUser(data)
+                }
+            }
+        });
+    }
+
 </script>
 </body>
 </html>

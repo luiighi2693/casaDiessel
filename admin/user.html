@@ -55,20 +55,6 @@
 <script>
     var selectIdForDelete = null;
 
-    function getAll() {
-        jQuery.ajax({
-            type: "POST",
-            url: "util.php",
-            data: {
-                "method" : "getAllUsers"
-            },
-            success: function(data){
-                console.log($.parseJSON(data));
-                setTableItems(data);
-            }
-        });
-    }
-
     function findByUser() {
         jQuery.ajax({
             type: "POST",
@@ -79,14 +65,14 @@
             },
             success: function(data){
                 console.log($.parseJSON(data));
-                setTableItems(data);
+                setTableItemsUser(data);
             }
         });
     }
 
     function search() {
         if($('#textSearch')[0].value==""){
-            getAll();
+            getAll("getAllUsers", "setTableItemsUser");
         }else{
             findByUser()
         }
@@ -105,12 +91,12 @@
                 "id" : selectIdForDelete
             },
             success: function(data){
-                getAll();
+                getAll("getAllUsers", "setTableItemsUser");
             }
         });
     }
 
-    function setTableItems(data) {
+    function setTableItemsUser(data) {
         $('#bodyTable').empty();
         var redirect = "'userDetail.html'";
         for(var i=0; i<$.parseJSON(data).length; i++){
@@ -121,6 +107,6 @@
         }
     }
 
-    getAll();
+    getAll("getAllUsers", "setTableItemsUser");
 
 </script>

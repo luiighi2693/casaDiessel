@@ -57,20 +57,6 @@
 <script>
     var selectIdForDelete = null;
 
-    function getAll() {
-        jQuery.ajax({
-            type: "POST",
-            url: "util.php",
-            data: {
-                "method" : "getAllProducts"
-            },
-            success: function(data){
-                console.log($.parseJSON(data));
-                setTableItems(data);
-            }
-        });
-    }
-
     function findByProduct() {
         jQuery.ajax({
             type: "POST",
@@ -81,14 +67,14 @@
             },
             success: function(data){
                 console.log($.parseJSON(data));
-                setTableItems(data);
+                setTableItemsProduct(data);
             }
         });
     }
 
     function search() {
         if($('#textSearch')[0].value==""){
-            getAll();
+            getAll("getAllProducts", "setTableItemsProduct");
         }else{
             findByProduct()
         }
@@ -109,12 +95,12 @@
                 "id" : selectIdForDelete
             },
             success: function(data){
-                getAll();
+                getAll("getAllProducts", "setTableItemsProduct");
             }
         });
     }
 
-    function setTableItems(data) {
+    function setTableItemsProduct(data) {
         $('#bodyTable').empty();
         var redirect = "'productDetail.html'";
         for(var i=0; i<$.parseJSON(data).length; i++){
@@ -182,5 +168,5 @@
             }
         });
     }
-    getAll();
+    getAll("getAllProducts", "setTableItemsProduct");
 </script>
