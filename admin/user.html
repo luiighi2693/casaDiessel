@@ -55,13 +55,6 @@
 <script>
     var selectIdForDelete = null;
 
-
-    function logout(){
-        window.sessionStorage.removeItem("idRol");
-        window.sessionStorage.removeItem("username");
-        window.location = "login.html";
-    }
-
     function getAll() {
         jQuery.ajax({
             type: "POST",
