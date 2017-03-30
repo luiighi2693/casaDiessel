@@ -55,7 +55,7 @@
 </div>
 
 <script>
-    var selectIdForDelete = null;
+//    var selectIdForDelete = null;
 
     function search() {
         if($('#textSearch')[0].value==""){
@@ -65,24 +65,14 @@
         }
     }
 
-    function selectForDelete(id) {
-        selectIdForDelete = id;
-    }
+//    function selectForDelete(id) {
+//        selectIdForDelete = id;
+//    }
 
     function deleteProduct() {
         deleteImagesInServer();
         deletePhotosByProduct();
-        jQuery.ajax({
-            type: "POST",
-            url: "util.php",
-            data: {
-                "method" : "deleteProduct",
-                "id" : selectIdForDelete
-            },
-            success: function(data){
-                getAll("getAllProducts", "setTableItemsProduct");
-            }
-        });
+        deleteEntity("deleteProduct","getAllProducts", "setTableItemsProduct");
     }
 
     function setTableItemsProduct(data) {

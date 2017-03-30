@@ -57,6 +57,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
+    var selectIdForDelete = null;
     $('#page-wrapper').load("main.html");
 
     if(window.sessionStorage.getItem("username")!=null){
@@ -126,6 +127,24 @@
                 }else{
                     setTableItemsUser(data)
                 }
+            }
+        });
+    }
+
+    function selectForDelete(id) {
+        selectIdForDelete = id;
+    }
+
+    function deleteEntity(deleteMethod, getAllMethod, setTableItemsMethod) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : deleteMethod,
+                "id" : selectIdForDelete
+            },
+            success: function(data){
+                getAll(getAllMethod, setTableItemsMethod);
             }
         });
     }
