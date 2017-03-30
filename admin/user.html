@@ -55,26 +55,11 @@
 <script>
     var selectIdForDelete = null;
 
-    function findByUser() {
-        jQuery.ajax({
-            type: "POST",
-            url: "util.php",
-            data: {
-                "method" : "findByUser",
-                "search" : $('#textSearch')[0].value
-            },
-            success: function(data){
-                console.log($.parseJSON(data));
-                setTableItemsUser(data);
-            }
-        });
-    }
-
     function search() {
         if($('#textSearch')[0].value==""){
             getAll("getAllUsers", "setTableItemsUser");
         }else{
-            findByUser()
+            findBy('findByUser', 'setTableItemsUser');
         }
     }
 

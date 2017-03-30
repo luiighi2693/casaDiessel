@@ -112,6 +112,24 @@
         });
     }
 
+    function findBy(method, setTable) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : method,
+                "search" : $('#textSearch')[0].value
+            },
+            success: function(data){
+                if(setTable=="setTableItemsProduct"){
+                    setTableItemsProduct(data);
+                }else{
+                    setTableItemsUser(data)
+                }
+            }
+        });
+    }
+
 </script>
 </body>
 </html>

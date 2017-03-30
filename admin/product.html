@@ -57,26 +57,11 @@
 <script>
     var selectIdForDelete = null;
 
-    function findByProduct() {
-        jQuery.ajax({
-            type: "POST",
-            url: "util.php",
-            data: {
-                "method" : "findByProduct",
-                "search" : $('#textSearch')[0].value
-            },
-            success: function(data){
-                console.log($.parseJSON(data));
-                setTableItemsProduct(data);
-            }
-        });
-    }
-
     function search() {
         if($('#textSearch')[0].value==""){
             getAll("getAllProducts", "setTableItemsProduct");
         }else{
-            findByProduct()
+            findBy('findByProduct', 'setTableItemsProduct');
         }
     }
 
