@@ -55,19 +55,11 @@
 </div>
 
 <script>
-//    var selectIdForDelete = null;
+    redirect = "'productDetail.html'";
 
     function search() {
-        if($('#textSearch')[0].value==""){
-            getAll("getAllProducts", "setTableItemsProduct");
-        }else{
-            findBy('findByProduct', 'setTableItemsProduct');
-        }
+        ($('#textSearch')[0].value=="") ? getAll("getAllProducts", "setTableItemsProduct") : findBy('findByProduct', 'setTableItemsProduct');
     }
-
-//    function selectForDelete(id) {
-//        selectIdForDelete = id;
-//    }
 
     function deleteProduct() {
         deleteImagesInServer();
@@ -77,24 +69,21 @@
 
     function setTableItemsProduct(data) {
         $('#bodyTable').empty();
-        var redirect = "'productDetail.html'";
-        for(var i=0; i<$.parseJSON(data).length; i++){
-            $('#bodyTable').append('' +
-                '<tr>' +
-                '<td>'+$.parseJSON(data)[i].nombre+'</td>' +
-                '<td>'+$.parseJSON(data)[i].codigo+'</td>' +
-                '<td>'+$.parseJSON(data)[i].marca+'</td>' +
-                '<td>'+$.parseJSON(data)[i].referencia+'</td>' +
-                '<td><a href="#productDetail.html?id='+$.parseJSON(data)[i].id+'" onclick="loadModule('+redirect+')"><i class="fa fa-fw fa-pencil"></i></a></td>'+verifyRole(data, i));
-        }
+        $.parseJSON(data).forEach( (element, index, array) => appendElement(element, data, index));
+    }
+
+    function appendElement(element, data, index) {
+        $('#bodyTable').append('' +
+            '<tr>' +
+            '<td>'+element.nombre+'</td>' +
+            '<td>'+element.codigo+'</td>' +
+            '<td>'+element.marca+'</td>' +
+            '<td>'+element.referencia+'</td>' +
+            '<td><a href="#productDetail.html?id='+element.id+'" onclick="loadModule('+redirect+')"><i class="fa fa-fw fa-pencil"></i></a></td>'+verifyRole(data, index));
     }
 
     function verifyRole(data, i) {
-        if(window.sessionStorage.getItem("idRol")=="3"){
-            return('<td></td></tr>');
-        }else{
-            return('<td><a href="#" onclick="selectForDelete('+$.parseJSON(data)[i].id+');" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-ban"></i></a></td></tr>');
-        }
+        return (window.sessionStorage.getItem("idRol")=="3") ? '<td></td></tr>' : '<td><a href="#" onclick="selectForDelete('+$.parseJSON(data)[i].id+');" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-ban"></i></a></td></tr>';
     }
 
     function deletePhotosByProduct() {
@@ -122,10 +111,7 @@
             },
             async: false,
             success: function (data) {
-                console.log($.parseJSON(data));
-                for (var i = 0; i < $.parseJSON(data).length; i++) {
-                    deleteImageInServer($.parseJSON(data)[i].fecha+$.parseJSON(data)[i].nombre);
-                }
+                $.parseJSON(data).forEach( (element, index, array) => deleteImageInServer(element.fecha+element.nombre));
             }
         });
     }

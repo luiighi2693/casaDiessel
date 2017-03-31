@@ -58,6 +58,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
     var selectIdForDelete = null;
+    var redirect = null;
     $('#page-wrapper').load("main.html");
 
     if(window.sessionStorage.getItem("username")!=null){
@@ -71,8 +72,9 @@
     }
 
     function logout(){
-        window.sessionStorage.removeItem("idRol");
-        window.sessionStorage.removeItem("username");
+        window.sessionStorage
+            .removeItem("idRol")
+            .removeItem("username");
         window.location = "login.html";
     }
 
@@ -104,11 +106,7 @@
             },
             async:false,
             success: function(data){
-                if(setTable=="setTableItemsProduct"){
-                    setTableItemsProduct(data);
-                }else{
-                    setTableItemsUser(data)
-                }
+                (setTable=="setTableItemsProduct") ? setTableItemsProduct(data) : setTableItemsUser(data);
             }
         });
     }
@@ -122,11 +120,7 @@
                 "search" : $('#textSearch')[0].value
             },
             success: function(data){
-                if(setTable=="setTableItemsProduct"){
-                    setTableItemsProduct(data);
-                }else{
-                    setTableItemsUser(data)
-                }
+                (setTable=="setTableItemsProduct") ? setTableItemsProduct(data) : setTableItemsUser(data);
             }
         });
     }

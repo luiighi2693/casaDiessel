@@ -53,19 +53,11 @@
 </div>
 
 <script>
-//    var selectIdForDelete = null;
+    redirect = "'userDetail.html'";
 
     function search() {
-        if($('#textSearch')[0].value==""){
-            getAll("getAllUsers", "setTableItemsUser");
-        }else{
-            findBy('findByUser', 'setTableItemsUser');
-        }
+        ($('#textSearch')[0].value=="") ? getAll("getAllUsers", "setTableItemsUser") : findBy('findByUser', 'setTableItemsUser');
     }
-
-//    function selectForDelete(id) {
-//        selectIdForDelete = id;
-//    }
 
     function deleteUser() {
         deleteEntity("deleteUser","getAllUsers", "setTableItemsUser");
@@ -73,13 +65,14 @@
 
     function setTableItemsUser(data) {
         $('#bodyTable').empty();
-        var redirect = "'userDetail.html'";
-        for(var i=0; i<$.parseJSON(data).length; i++){
-            $('#bodyTable').append('<tr><td>'+$.parseJSON(data)[i].nombre+'</td>' +
-                '<td>'+$.parseJSON(data)[i].cedula+'</td>' +
-                '<td><a href="#userDetail?id='+$.parseJSON(data)[i].id+'" onclick="loadModule('+redirect+')"><i class="fa fa-fw fa-pencil"></i></a></td>' +
-                '<td><a href="#" onclick="selectForDelete('+$.parseJSON(data)[i].id+');" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-ban"></i></a></td></tr>');
-        }
+        $.parseJSON(data).forEach( (element, index, array) => appendElement(element, data, index));
+    }
+
+    function appendElement(element, data, index) {
+        $('#bodyTable').append('<tr><td>'+element.nombre+'</td>' +
+            '<td>'+element.cedula+'</td>' +
+            '<td><a href="#userDetail?id='+element.id+'" onclick="loadModule('+redirect+')"><i class="fa fa-fw fa-pencil"></i></a></td>' +
+            '<td><a href="#" onclick="selectForDelete('+element.id+');" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-ban"></i></a></td></tr>');
     }
 
     getAll("getAllUsers", "setTableItemsUser");
