@@ -486,3 +486,12 @@ Animation keyframes
   }
 }
 
+@media (max-width: 767px) {
+  .marginForIndexImages{
+    margin: 15%;
+  }
+  
+  .overflowMobile{
+    overflow: auto;
+  }
+}

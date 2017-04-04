@@ -67,13 +67,27 @@
         <img src="img/scroll-down.gif" width="100px">
     </div>
 </section>
-<section class="home">
+<section class="home overflowMobile">
     <div class="row" style="text-align: center;padding-top: 15%;color: white;">
-        <h1 style="background-color: #222"> Bienvenido a Casa Diesel</h1>
-        <p style="background-color: #333">Los expertos en inyección de motores diesel</p>
+        <p style="background-color: #333">kjdfvbdjfhv fjvjhdb fj vjfhjhfjhfdj fjh fhjlfd jfhd fjh fdhljdfh fhf jfh hfjdj dfjhfj hfj f</p>
     </div>
-    <div class="row" style="text-align: center;">
-        <a href="productos.html" class="btn btn-warning linkFixed">Productos</a>
+    <div class="row" style="text-align: center; margin: 5%;">
+        <div class="col-sm-3 marginForIndexImages">
+            <img id="image1" src="img/pexels-photo-102723.jpg" class="img-responsive" alt="Cinque Terre">
+            <p style="background-color: #333; color: #fff;">kjdfvbdjfhv fjvjhdb fj vjfhjhfjhfdj fjh fhjlfd jfhd fjh fdhljdfh fhf jfh hfjdj dfjhfj hfj f</p>
+        </div>
+        <div class="col-sm-3 marginForIndexImages">
+            <img id="image2" src="img/amortiguadores.jpg" class="img-responsive" alt="Cinque Terre">
+            <p style="background-color: #333; color: #fff;">kjdfvbdjfhv fjvjhdb fj vjfhjhfjhfdj fjh fhjlfd jfhd fjh fdhljdfh fhf jfh hfjdj dfjhfj hfj f</p>
+        </div>
+        <div class="col-sm-3 marginForIndexImages">
+            <img id="image3" src="img/amortiguadores.jpg" class="img-responsive" alt="Cinque Terre">
+            <p style="background-color: #333; color: #fff;">kjdfvbdjfhv fjvjhdb fj vjfhjhfjhfdj fjh fhjlfd jfhd fjh fdhljdfh fhf jfh hfjdj dfjhfj hfj f</p>
+        </div>
+        <div class="col-sm-3 marginForIndexImages">
+            <img id="image4" src="img/amortiguadores.jpg" class="img-responsive" alt="Cinque Terre">
+            <p style="background-color: #333; color: #fff;">kjdfvbdjfhv fjvjhdb fj vjfhjhfjhfdj fjh fhjlfd jfhd fjh fdhljdfh fhf jfh hfjdj dfjhfj hfj f</p>
+        </div>
     </div>
 </section>
 
@@ -84,6 +98,13 @@
 <script src="js/index.js"></script>
 <script>
   var cont = 2;
+  var heigthImages = window.innerHeight/5+"px";
+
+  setImage($('#image1'));
+  setImage($('#image2'));
+  setImage($('#image3'));
+  setImage($('#image4'));
+
   window.setInterval(function(){
       if(cont == 1){
           $('.home').css("background-image", "url(img/copia2.jpg)");
@@ -111,6 +132,11 @@
           cont++;
       }
   }, 6000);
+
+  function setImage(elem) {
+      elem.css('width', '100%');
+      elem.css('height', heigthImages);
+  }
 
 </script>
 </body>
