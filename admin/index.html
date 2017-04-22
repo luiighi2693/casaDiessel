@@ -72,9 +72,8 @@
     }
 
     function logout(){
-        window.sessionStorage
-            .removeItem("idRol")
-            .removeItem("username");
+        window.sessionStorage.removeItem("idRol");
+        window.sessionStorage.removeItem("username");
         window.location = "login.html";
     }
 

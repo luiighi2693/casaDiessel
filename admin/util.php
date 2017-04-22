@@ -33,6 +33,10 @@ if($_POST['method']=='getAllMaquinarias'){
     getAllMaquinarias();
 }
 
+if($_POST['method']=='getAllMarcas'){
+    getAllMarcas();
+}
+
 if($_POST['method']=='getAllTipos'){
     getAllTipos();
 }
@@ -73,6 +77,10 @@ if($_POST['method']=='getMaquinariasFromProduct'){
     getMaquinariasFromProduct();
 }
 
+if($_POST['method']=='getMarcasFromProduct'){
+    getMarcasFromProduct();
+}
+
 if($_POST['method']=='findUserByUsernameAndPassword'){
     findUserByUsernameAndPassword();
 }
@@ -97,12 +105,24 @@ if($_POST['method']=='deleteMachineFromProduct'){
     deleteMachineFromProduct();
 }
 
+if($_POST['method']=='deleteMarcaFromProduct'){
+    deleteMarcaFromProduct();
+}
+
 if($_POST['method']=='addMachineFromProduct'){
     addMachineFromProduct();
 }
 
+if($_POST['method']=='addMarcaFromProduct'){
+    addMarcaFromProduct();
+}
+
 if($_POST['method']=='findMaquinariaNamesByProduct'){
     findMaquinariaNamesByProduct();
+}
+
+if($_POST['method']=='findMarcaNamesByProduct'){
+    findMarcaNamesByProduct();
 }
 
 if($_POST['method']=='getFirstImageProduct'){
@@ -128,10 +148,9 @@ function getAllProducts(){
 
 function findByProduct(){
     $data = "'%".$_POST['search']."%'";
-    $query = 'SELECT id, nombre, codigo, marca, referencia FROM producto WHERE nombre LIKE '.$data.' UNION
-        SELECT id, nombre, codigo, marca, referencia FROM producto WHERE codigo LIKE '.$data.' UNION
-        SELECT id, nombre, codigo, marca, referencia FROM producto WHERE marca LIKE '.$data.' UNION
-        SELECT id, nombre, codigo, marca, referencia FROM producto WHERE referencia LIKE '.$data;
+    $query = 'SELECT id, nombre, codigo, referencia FROM producto WHERE nombre LIKE '.$data.' UNION
+        SELECT id, nombre, codigo, referencia FROM producto WHERE codigo LIKE '.$data.' UNION
+        SELECT id, nombre, codigo, referencia FROM producto WHERE referencia LIKE '.$data;
     executeQuery($query);
 }
 
@@ -142,6 +161,11 @@ function getAllRoles(){
 
 function getAllMaquinarias(){
     $query = 'SELECT * FROM maquinaria';
+    executeQuery($query);
+}
+
+function getAllMarcas(){
+    $query = 'SELECT * FROM marca';
     executeQuery($query);
 }
 
@@ -194,6 +218,10 @@ function getMaquinariasFromProduct(){
     $query = 'SELECT idMaquinaria FROM producto_has_maquinaria WHERE idProducto= '.$_POST['id'];
     executeQuery($query);
 }
+function getMarcasFromProduct(){
+    $query = 'SELECT idMarca FROM producto_has_marca WHERE idProducto= '.$_POST['id'];
+    executeQuery($query);
+}
 
 function findUserByUsernameAndPassword(){
     $query = 'SELECT * FROM usuario WHERE nombre= \''.$_POST['username'].'\' AND clave= \''.$_POST['clave'].'\'';
@@ -225,8 +253,18 @@ function deleteMachineFromProduct(){
     executeQuery($query);
 }
 
+function deleteMarcaFromProduct(){
+    $query = 'DELETE FROM producto_has_marca WHERE idProducto= '.$_POST['id'];
+    executeQuery($query);
+}
+
 function addMachineFromProduct(){
     $query = 'INSERT INTO producto_has_maquinaria (idProducto, idMaquinaria) VALUES ('.$_POST['idProducto'].', '.$_POST['idMaquinaria'].')';
+    executeQuery($query);
+}
+
+function addMarcaFromProduct(){
+    $query = 'INSERT INTO producto_has_marca (idProducto, idMarca) VALUES ('.$_POST['idProducto'].', '.$_POST['idMarca'].')';
     executeQuery($query);
 }
 
@@ -234,6 +272,13 @@ function findMaquinariaNamesByProduct(){
     $query = 'SELECT nombre FROM maquinaria
       INNER JOIN producto_has_maquinaria ON maquinaria.id = producto_has_maquinaria.idMaquinaria
       WHERE producto_has_maquinaria.idProducto ='.$_POST['id'];
+    executeQuery($query);
+}
+
+function findMarcaNamesByProduct(){
+    $query = 'SELECT nombre FROM marca
+      INNER JOIN producto_has_marca ON marca.id = producto_has_marca.idMarca
+      WHERE producto_has_marca.idProducto ='.$_POST['id'];
     executeQuery($query);
 }
 

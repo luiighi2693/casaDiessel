@@ -59,29 +59,28 @@
         <div style="width: 40%; text-align: left; padding-left: 5%;">
             <h2>Casa Diesel, C.A.</h2>
             <h3>Rif: </h3>
-            <h3>Contacto</h3>
-            <h3>+58 422315315</h3>
-            <h3>Email</h3>
+            <h3>Contacto: +58 422315315</h3>
+            <h3>Email: info@casadiesel.com.ve</h3>
         </div>
         <div style="width: 60%">
             <div class="col-md-12">
                 <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput">Nombre</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre...">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput2">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                    <label>Correo</label>
+                    <input type="email" class="form-control" id="email" placeholder="Correo...">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput2">Asunto</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Another input">
+                    <label>Asunto</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Asunto...">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group col-md-12">
-                    <label for="formGroupExampleInput">Mensage</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Example input">
+                    <label>Mensage</label>
+                    <input type="text" class="form-control" id="messaje" placeholder="Mensaje...">
                 </div>
             </div>
         </div>
@@ -91,36 +90,39 @@
         <div class="row" style="text-align: left; padding-left: 5%;">
             <h2>Casa Diesel, C.A.</h2>
             <h3>Rif: </h3>
-            <h3>Contacto</h3>
-            <h3>+58 422315315</h3>
-            <h3>Email</h3>
+            <h3>Contacto: +58 422315315</h3>
+            <h3>Email: info@casadiesel.com.ve</h3>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput">Nombre</label>
-                    <input type="text" class="form-control" id="formGroupExampleInputSm" placeholder="Example input">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" id="nameMobile" placeholder="Nombre...">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput2">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2Sm" placeholder="Another input">
+                    <label>Correo</label>
+                    <input type="email" class="form-control" id="emailMobile" placeholder="Correo...">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput2">Asunto</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput3Sm" placeholder="Another input">
+                    <label>Asunto</label>
+                    <input type="text" class="form-control" id="subjectMobile" placeholder="Asunto...">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group col-md-12">
-                    <label for="formGroupExampleInput">Mensage</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput4Sm" placeholder="Example input">
+                    <label>Mensage</label>
+                    <input type="text" class="form-control" id="messajeMobile" placeholder="Mensaje...">
                 </div>
             </div>
         </div>
     </div>
 
-    <div style="display: flex; align-items: center;justify-content: center;">
-        <button type="submit" class="btn btn-default">Enviar</button>
+    <div class="hidden-xs" style="display: flex; align-items: center;justify-content: center;">
+        <button type="submit" onclick="sendData()" class="btn btn-default">Enviar</button>
+    </div>
+
+    <div class="hidden-md hidden-lg hidden-sm" style="display: flex; align-items: center;justify-content: center;">
+        <button type="submit" onclick="sendDataMobile()" class="btn btn-default">Enviar</button>
     </div>
 </section>
 
@@ -131,6 +133,7 @@
 <script src="js/index.js"></script>
 <script>
     var cont = 2;
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     window.setInterval(function(){
         if(cont == 1){
             $('.home').css("background-image", "url(img/copia2.jpg)");
@@ -158,6 +161,56 @@
             cont++;
         }
     }, 6000);
+
+    function sendData() {
+        sendMail($('#name')[0].value,$('#email')[0].value, $('#subject')[0].value, $('#messaje')[0].value);
+    }
+
+    function sendDataMobile() {
+        sendMail($('#nameMobile')[0].value,$('#emailMobile')[0].value, $('#subjectMobile')[0].value, $('#messajeMobile')[0].value);
+    }
+
+    function sendMail(name, email, subject, messaje) {
+        if(validateForm(name, email, subject, messaje)){
+            jQuery.ajax({
+                type: "POST",
+                url: "admin/mail.php?XDEBUG_SESSION_START=13571",
+                data: {
+                    "subject" : subject,
+                    "message" : messaje,
+                    "name" : name,
+                    "fromEmail" : email
+                },
+                async: false,
+                success: function(data){
+                    alert("Mensaje Enviado!");
+                    window.location = "index.html";
+                }
+            });
+        }else{
+            alert("existen campos invalidos");
+        }
+    }
+
+    function validateForm(name, email, subject, messaje) {
+        if(!re.test(email)){
+            return false;
+        }
+
+        if((name).length==0){
+            return false
+        }
+
+        if((subject).length==0){
+            return false
+        }
+
+        if((messaje).length==0){
+            return false
+        }
+
+        return true;
+    }
 
 </script>
 </body>

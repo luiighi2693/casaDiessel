@@ -84,17 +84,17 @@
             <div id="productsSmall" class="container hidden-md hidden-lg hidden-sm" style="display: flex; align-items: center;justify-content: center; width: 60%"></div>
         </div>
     </div>
-    <div class="row" style="text-align: center;color: white;">
-        <ul class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
-    </div>
+    <!--<div class="row" style="text-align: center;color: white;">-->
+        <!--<ul class="pagination">-->
+            <!--<li><a href="#">&laquo;</a></li>-->
+            <!--<li><a href="#">1</a></li>-->
+            <!--<li><a href="#">2</a></li>-->
+            <!--<li><a href="#">3</a></li>-->
+            <!--<li><a href="#">4</a></li>-->
+            <!--<li><a href="#">5</a></li>-->
+            <!--<li><a href="#">&raquo;</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
 </section>
 
 <script src='js/jquery.min.js'></script>
@@ -104,35 +104,9 @@
 <script src="js/index.js"></script>
 <script>
     $('.dropdown-toggle').dropdown()
-    $('.home').css("overflow", "auto");
-    var cont = 2;
-    window.setInterval(function(){
-        if(cont == 1){
-            $('.home').css("background-image", "url(img/copia2.jpg)");
-        }
-
-        if(cont == 2){
-            $('.home').css("background-image", "url(img/copia1.jpg)");
-        }
-
-        if(cont == 3){
-            $('.home').css("background-image", "url(img/pexels-photo-102723.jpg)");
-        }
-
-        if(cont == 4){
-            $('.home').css("background-image", "url(img/pexels-photo-188679.jpg)");
-        }
-
-        if(cont == 5){
-            $('.home').css("background-image", "url(img/pexels-photo-211974.jpg)");
-        }
-
-        if(cont == 5){
-            cont = 1;
-        }else{
-            cont++;
-        }
-    }, 6000);
+    $('.home')
+        .css("overflow", "auto")
+        .css("background-image", "url(img/copia2.jpg)");
 
     getAllProducts();
 

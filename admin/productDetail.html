@@ -21,19 +21,23 @@
                         <label>Caracteristicas</label>
                         <input id="caracteristicas" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label>Descripción</label>
-                        <textarea id="descripcion" class="form-control" rows="3"></textarea>
-                    </div>
 
                     <div id="checkboxGroup" class="form-group">
                         <label>Maquinaria</label>
                     </div>
+
+                    <div id="checkboxGroupMarca" class="form-group">
+                        <label>Marcas</label>
+                    </div>
                 </div>
                 <div class="col-lg-6">
+                    <!--<div class="form-group">-->
+                        <!--<label>Marca</label>-->
+                        <!--<input id="marca" class="form-control">-->
+                    <!--</div>-->
                     <div class="form-group">
-                        <label>Marca</label>
-                        <input id="marca" class="form-control">
+                        <label>Descripción</label>
+                        <textarea id="descripcion" class="form-control" rows="3"></textarea>
                     </div>
 
                     <div class="form-group">
@@ -108,6 +112,7 @@
 
     setDataType();
     setDataMachine();
+    setDataMarca();
 
     if(getURLParameter("id")==undefined){
         $('#productTitle').text("Producto Nuevo");
@@ -124,7 +129,9 @@
         }else{
             checkImages(getURLParameter("id"));
             deleteMachines(getURLParameter("id"));
+            deleteMarcas(getURLParameter("id"));
             addMachines(getURLParameter("id"));
+            addMarcas(getURLParameter("id"));
             editProduct();
         }
         event.preventDefault();
@@ -144,11 +151,12 @@
                 $('#codigo')[0].value = $.parseJSON(data)[0].codigo;
                 $('#caracteristicas')[0].value = $.parseJSON(data)[0].caracteristicas;
                 $('#descripcion')[0].value = $.parseJSON(data)[0].descripcion;
-                $('#marca')[0].value = $.parseJSON(data)[0].marca;
+//                $('#marca')[0].value = $.parseJSON(data)[0].marca;
                 $('#referencia')[0].value = $.parseJSON(data)[0].referencia;
                 $('#selectTipo').val($.parseJSON(data)[0].idTipo)
 
                 setCheckboxSelected();
+                setCheckboxMarcaSelected();
             }
         });
     }
@@ -191,6 +199,26 @@
         });
     }
 
+    function setDataMarca() {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            async: false,
+            data: {
+                "method" : "getAllMarcas"
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#checkboxGroupMarca').append(' <div class="checkbox">' +
+                        '<label>' +
+                        '<input type="checkbox" value="'+$.parseJSON(data)[i].id+'">'+$.parseJSON(data)[i].nombre+'</label>' +
+                        '</div>');
+                }
+            }
+        });
+    }
+
     function setCheckboxSelected(){
         jQuery.ajax({
             type: "POST",
@@ -209,6 +237,24 @@
         });
     }
 
+    function setCheckboxMarcaSelected(){
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            async: false,
+            data: {
+                "method" : "getMarcasFromProduct",
+                "id" : getURLParameter("id")
+            },
+            success: function(data){
+                console.log($.parseJSON(data));
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#checkboxGroupMarca').find('input[value='+$.parseJSON(data)[i].idMarca+']')[0].checked = true;
+                }
+            }
+        });
+    }
+
     function createProduct() {
         jQuery.ajax({
             type: "POST",
@@ -219,13 +265,14 @@
                 "codigo" : $('#codigo')[0].value,
                 "descripcion" : $('#descripcion')[0].value,
                 "caracteristicas" : $('#caracteristicas')[0].value,
-                "marca" : $('#marca')[0].value,
+//                "marca" : $('#marca')[0].value,
                 "referencia" : $('#referencia')[0].value,
                 "idTipo" : $('#selectTipo').val()
             },
             success: function(data){
                 checkImages($.parseJSON(data).id);
                 addMachines($.parseJSON(data).id);
+                addMarcas($.parseJSON(data).id);
                 loadModule('product.html');
             }
         });
@@ -242,7 +289,7 @@
                 "codigo" : $('#codigo')[0].value,
                 "descripcion" : $('#descripcion')[0].value,
                 "caracteristicas" : $('#caracteristicas')[0].value,
-                "marca" : $('#marca')[0].value,
+//                "marca" : $('#marca')[0].value,
                 "referencia" : $('#referencia')[0].value,
                 "idTipo" : $('#selectTipo').val()
             },
@@ -377,9 +424,30 @@
         });
     }
 
+    function deleteMarcas(id) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "deleteMarcaFromProduct",
+                "id" : id
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
     function addMachines(id) {
-        for(var i=0; i<$( "input[type=checkbox]:checked:enabled" ).length;i++){
-            addMachine($( "input[type=checkbox]:checked:enabled" )[i].value, id);
+        for(var i=0; i<$('#checkboxGroup input[type=checkbox]:checked:enabled').length;i++){
+            addMachine($('#checkboxGroup input[type=checkbox]:checked:enabled')[i].value, id);
+        }
+    }
+
+    function addMarcas(id) {
+        for(var i=0; i<$('#checkboxGroupMarca input[type=checkbox]:checked:enabled').length;i++){
+            addMarca($('#checkboxGroupMarca input[type=checkbox]:checked:enabled')[i].value, id);
         }
     }
 
@@ -391,6 +459,22 @@
                 "method" : "addMachineFromProduct",
                 "idProducto" : idProducto,
                 "idMaquinaria" : idMachine
+            },
+            async: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
+    function addMarca(idMarca, idProducto) {
+        jQuery.ajax({
+            type: "POST",
+            url: "util.php",
+            data: {
+                "method" : "addMarcaFromProduct",
+                "idProducto" : idProducto,
+                "idMarca" : idMarca
             },
             async: false,
             success: function(data){

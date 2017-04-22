@@ -32,7 +32,7 @@
   </nav>
 </div>
 
-<section class="home">
+<section class="home multipleBackgrounds">
     <div style="display: flex; margin: 2%;">
         <div class="iconSmallFixed" style="height: 10%;width: 15%;">
             <a href="index.html" class="linkFixed"><img src="img/logo.png" class="img-responsive" href="index.html"></a>
@@ -67,7 +67,7 @@
         <img src="img/scroll-down.gif" width="100px">
     </div>
 </section>
-<section class="home overflowMobile">
+<section class="home overflowMobile uniqueBackground">
     <div class="row" style="text-align: center;padding-top: 15%;color: white;">
         <p style="background-color: #333">kjdfvbdjfhv fjvjhdb fj vjfhjhfjhfdj fjh fhjlfd jfhd fjh fdhljdfh fhf jfh hfjdj dfjhfj hfj f</p>
     </div>
@@ -105,25 +105,28 @@
   setImage($('#image3'));
   setImage($('#image4'));
 
+  $('.uniqueBackground').css("background-image", "none");
+  $('.uniqueBackground').css("background-color", "#d2d0d0");
+
   window.setInterval(function(){
       if(cont == 1){
-          $('.home').css("background-image", "url(img/copia2.jpg)");
+          $('.multipleBackgrounds').css("background-image", "url(img/copia2.jpg)");
       }
 
       if(cont == 2){
-          $('.home').css("background-image", "url(img/copia1.jpg)");
+          $('.multipleBackgrounds').css("background-image", "url(img/copia1.jpg)");
       }
 
       if(cont == 3){
-          $('.home').css("background-image", "url(img/pexels-photo-102723.jpg)");
+          $('.multipleBackgrounds').css("background-image", "url(img/pexels-photo-102723.jpg)");
       }
 
       if(cont == 4){
-          $('.home').css("background-image", "url(img/pexels-photo-188679.jpg)");
+          $('.multipleBackgrounds').css("background-image", "url(img/pexels-photo-188679.jpg)");
       }
 
       if(cont == 5){
-          $('.home').css("background-image", "url(img/pexels-photo-211974.jpg)");
+          $('.multipleBackgrounds').css("background-image", "url(img/pexels-photo-211974.jpg)");
       }
 
       if(cont == 5){

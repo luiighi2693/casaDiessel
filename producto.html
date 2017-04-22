@@ -82,7 +82,7 @@
             <div style="width: 50%; text-align: left; padding-left: 5%; color: black;">
                 <h1 id="nombre"></h1>
                 <h4 style="padding-top: 2%;">Codigo: <span id="codigo"></span></h4>
-                <h4 style="padding-top: 2%;">Marca: <span id="marca"></span></h4>
+                <h4 style="padding-top: 2%;">Marcas: <span id="marca"></span></h4>
                 <h4 style="padding-top: 2%;">Caracteristicas: <span id="caracteristicas"></span></h4>
                 <h4 style="padding-top: 2%;">Descripción: <span id="descripcion"></span></h4>
                 <h4 style="padding-top: 2%;">Maquinaria: <span id="maquinaria"></span></h4>
@@ -169,6 +169,7 @@
 
     setProduct();
     setMachines();
+    setMarcas();
     setImages();
 
     function getURLParameter(sParam) {
@@ -198,7 +199,7 @@
                 $('#codigo').text($.parseJSON(data)[0].codigo);
                 $('#caracteristicas').text($.parseJSON(data)[0].caracteristicas);
                 $('#descripcion').text($.parseJSON(data)[0].descripcion);
-                $('#marca').text($.parseJSON(data)[0].marca);
+//                $('#marca').text($.parseJSON(data)[0].marca);
             }
         });
     }
@@ -219,6 +220,26 @@
                     result+= $.parseJSON(data)[i].nombre+" ,";
                 }
                 $('#maquinaria').text(result.substring(0, result.length - 1));
+            }
+        });
+    }
+
+    function setMarcas() {
+        jQuery.ajax({
+            type: "POST",
+            url: "admin/util.php",
+            data: {
+                "method" : "findMarcaNamesByProduct",
+                "id" : getURLParameter("id")
+            },
+            async: false,
+            success: function(data){
+                console.log($.parseJSON(data));
+                var result = "";
+                for (var i = 0; i<$.parseJSON(data).length;i++){
+                    result+= $.parseJSON(data)[i].nombre+" ,";
+                }
+                $('#marca').text(result.substring(0, result.length - 1));
             }
         });
     }
