@@ -132,6 +132,16 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/index.js"></script>
 <script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/58fb969664f23d19a89aea99/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+
     var cont = 2;
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     window.setInterval(function(){
@@ -177,8 +187,7 @@
                 url: "admin/mail.php?XDEBUG_SESSION_START=13571",
                 data: {
                     "subject" : subject,
-                    "message" : messaje,
-                    "name" : name,
+                    "content" : generateContent(name, email, messaje, null, null),
                     "fromEmail" : email
                 },
                 async: false,
@@ -210,6 +219,21 @@
         }
 
         return true;
+    }
+
+    function generateContent(name, email, messaje, code, phone) {
+        var result = "";
+        result+="Nombre: "+name+"\n\n";
+        result+="Email: "+email+"\n\n";
+        if(phone!=null){
+            result+="Teléfono: "+phone+"\n\n";
+        }
+
+        if(code!=null){
+            result+="Código Producto: "+code+"\n\n";
+        }
+        result+="Mensaje: "+messaje+"\n\n";
+        return result;
     }
 
 </script>

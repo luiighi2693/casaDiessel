@@ -112,23 +112,23 @@
                             <div class="modal-body">
                                 <form role="form">
                                     <div class="form-group">
-                                        <label for="inputName">Nombre</label>
+                                        <label for="name">Nombre</label>
                                         <input type="text" class="form-control"
-                                               id="inputName" placeholder="Ingrese su nombre"/>
+                                               id="name" placeholder="Ingrese su nombre"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputEmail">Correo</label>
+                                        <label for="email">Correo</label>
                                         <input type="email" class="form-control"
-                                               id="inputEmail" placeholder="Ingrese el correo"/>
+                                               id="email" placeholder="Ingrese el correo"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputPhone">Telefono</label>
+                                        <label for="phone">Telefono</label>
                                         <input type="email" class="form-control"
-                                               id="inputPhone" placeholder="Ingrese su telefono"/>
+                                               id="phone" placeholder="Ingrese su telefono"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputMessage">Mensaje</label>
-                                        <textarea class="form-control" rows="3" id="inputMessage"></textarea>
+                                        <label for="messaje">Mensaje</label>
+                                        <textarea class="form-control" rows="3" id="messaje"></textarea>
                                     </div>
                                 </form>
                             </div>
@@ -139,7 +139,7 @@
                                         data-dismiss="modal">
                                     Cerrar
                                 </button>
-                                <button type="button" class="btn btn-primary">
+                                <button type="button" class="btn btn-primary" onclick="sendData()">
                                     Enviar
                                 </button>
                             </div>
@@ -166,6 +166,9 @@
     $('#image-2 img').hide();
     $('#image-3 img').hide();
     $('#image-4 img').hide();
+
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var codigo = null;
 
     setProduct();
     setMachines();
@@ -200,6 +203,7 @@
                 $('#caracteristicas').text($.parseJSON(data)[0].caracteristicas);
                 $('#descripcion').text($.parseJSON(data)[0].descripcion);
 //                $('#marca').text($.parseJSON(data)[0].marca);
+                codigo = $.parseJSON(data)[0].codigo;
             }
         });
     }
@@ -283,6 +287,69 @@
         img.removeData('zoomImage');
 
         img.elevateZoom();
+    }
+
+    function sendData() {
+        sendMail($('#name')[0].value,$('#email')[0].value, "Producto", $('#messaje')[0].value, $('#phone')[0].value);
+    }
+
+    function sendMail(name, email, subject, messaje, phone) {
+        if(validateForm(name, email, subject, messaje, phone)){
+            jQuery.ajax({
+                type: "POST",
+                url: "admin/mail.php?XDEBUG_SESSION_START=13571",
+                data: {
+                    "subject" : subject,
+                    "content" : generateContent(name, email, messaje, codigo, phone),
+                    "fromEmail" : email
+                },
+                async: false,
+                success: function(data){
+                    alert("Mensaje Enviado!");
+                }
+            });
+        }else{
+            alert("existen campos invalidos");
+        }
+    }
+
+    function validateForm(name, email, subject, messaje, phone) {
+        if(!re.test(email)){
+            return false;
+        }
+
+        if((name).length==0){
+            return false
+        }
+
+        if((subject).length==0){
+            return false
+        }
+
+        if((messaje).length==0){
+            return false
+        }
+
+        if((phone).length==0){
+            return false
+        }
+
+        return true;
+    }
+
+    function generateContent(name, email, messaje, code, phone) {
+        var result = "";
+        result+="Nombre: "+name+"\n\n";
+        result+="Email: "+email+"\n\n";
+        if(phone!=null){
+            result+="Teléfono: "+phone+"\n\n";
+        }
+
+        if(code!=null){
+            result+="Código Producto: "+code+"\n\n";
+        }
+        result+="Mensaje: "+messaje+"\n\n";
+        return result;
     }
 
 </script>
