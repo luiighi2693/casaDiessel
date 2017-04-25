@@ -38,9 +38,9 @@
         </div>
 
         <div class="input-group searchSmallFixed" style="width: 70%; padding-left: 10%">
-            <input type="text" class="form-control" placeholder="Necesita un producto" name="q">
+            <input id="search" type="text" class="form-control" placeholder="Necesita un producto" name="q">
             <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" type="submit" onclick="searchProducts()"><i class="fa fa-search"></i></button>
             </div>
         </div>
         <div style="width: 15%;">
@@ -55,46 +55,21 @@
     <div class="row" style="text-align: center;color: white;">
         <div style="display: flex;">
             <div class="container" style="width: 10%; text-align: left; padding-left: 5%;">
-                <div class="row" style="padding: 2%;">
-                    <h3>Marca</h3>
+                <div id="marcas">
+                    <div class="row" style="padding: 2%;">
+                        <h3>Marcas</h3>
+                    </div>
                 </div>
-                <div class="row" style="padding: 2%;">
-                    <a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">Toyota</a>
-                </div>
-                <div class="row" style="padding: 2%;">
-                    <a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">Toyota</a>
-                </div>
-                <div class="row" style="padding: 2%;">
-                    <a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">Toyota</a>
-                </div>
-                <div class="row" style="padding: 2%;">
-                    <h3>Maquinaria</h3>
-                </div>
-                <div class="row" style="padding: 2%;">
-                    <a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">Toyota</a>
-                </div>
-                <div class="row" style="padding: 2%;">
-                    <a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">Toyota</a>
-                </div>
-                <div class="row" style="padding: 2%;">
-                    <a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">Toyota</a>
+                <div id="maquinarias">
+                    <div class="row" style="padding: 2%;">
+                        <h3>Maquinaria</h3>
+                    </div>
                 </div>
             </div>
             <div id="products" class="container hidden-xs" style="width: 90%"></div>
             <div id="productsSmall" class="container hidden-md hidden-lg hidden-sm" style="display: flex; align-items: center;justify-content: center; width: 60%"></div>
         </div>
     </div>
-    <!--<div class="row" style="text-align: center;color: white;">-->
-        <!--<ul class="pagination">-->
-            <!--<li><a href="#">&laquo;</a></li>-->
-            <!--<li><a href="#">1</a></li>-->
-            <!--<li><a href="#">2</a></li>-->
-            <!--<li><a href="#">3</a></li>-->
-            <!--<li><a href="#">4</a></li>-->
-            <!--<li><a href="#">5</a></li>-->
-            <!--<li><a href="#">&raquo;</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
 </section>
 
 <script src='js/jquery.min.js'></script>
@@ -103,11 +78,23 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/index.js"></script>
 <script>
-    $('.dropdown-toggle').dropdown()
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/58fb969664f23d19a89aea99/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+
+    $('.dropdown-toggle').dropdown();
     $('.home')
         .css("overflow", "auto")
         .css("background-image", "url(img/copia2.jpg)");
 
+    setMarcas();
+    setMaquinarias();
     getAllProducts();
 
     function getAllProducts() {
@@ -120,76 +107,33 @@
             async: false,
             success: function(data){
                 console.log($.parseJSON(data));
-                var count =1;
-                var container = $('<div class="col-xs-12"></div>');
-                var form;
-                var idImage;
-                var images = [];
-                var imageStyle = "cursor: pointer; width: 100%; height: "+window.innerHeight/8+"px";
-                for(var i=0; i<$.parseJSON(data).length; i++){
-                    if (count==1 || i==$.parseJSON(data).length-1){
-                        form = $('<div class="form-group col-xs-2 col-xs-offset-1"></div>');
-                    }else{
-                        form = $('<div class="form-group col-xs-2"></div>');
-                    }
-
-                    idImage='image-'+i;
-                    form.append('<img id="'+idImage+'" src="#" class="img-responsive" style="'+imageStyle+'" alt="" onclick="showDetails('+$.parseJSON(data)[i].id+')">' +
-                        '<h4 class="nameFont" style="font-size: 1.5vw;">'+$.parseJSON(data)[i].nombre+'</h4>' +
-                        '<h5 class="codeFont" style="font-size: 1vw;">'+$.parseJSON(data)[i].codigo+'</h5>');
-
-                    container.append(form);
-
-                    if(count==5 || i==$.parseJSON(data).length-1){
-                        cont=0;
-                        $('#products').append(container);
-                        container = $('<div class="col-xs-12"></div>');
-                    }
-
-                    images.push(
-                        {
-                            id:$.parseJSON(data)[i].id,
-                            idImage:idImage
-                        }
-                    );
-
-                    count++;
-                }
-
-                for( i=0; i<images.length; i++){
-                    getFirstImageProduct(images[i].id,images[i].idImage);
-                }
-
-                count =1;
-                container = $('<div class="col-md-12"></div>');
-                images = [];
-                imageStyle = "cursor: pointer; width: 100%; height: "+window.innerHeight/6+"px";
-                for( i=0; i<$.parseJSON(data).length; i++){
-                    form = $('<div class="form-group col-md-2"></div>');
-
-                    idImage='imagesm-'+i;
-                    form.append('<img id="'+idImage+'" src="#" class="img-responsive" style="'+imageStyle+'" alt="" onclick="showDetails('+$.parseJSON(data)[i].id+')">' +
-                        '<h4 class="nameFont" style="font-size: 1.5vw;">'+$.parseJSON(data)[i].nombre+'</h4>' +
-                        '<h5 class="codeFont" style="font-size: 1vw;">'+$.parseJSON(data)[i].codigo+'</h5>');
-
-                    container.append(form);
-
-                    images.push(
-                        {
-                            id:$.parseJSON(data)[i].id,
-                            idImage:idImage
-                        }
-                    );
-
-                    count++;
-                }
-                $('#productsSmall').append(container);
-
-                for( i=0; i<images.length; i++){
-                    getFirstImageProduct(images[i].id,images[i].idImage);
-                }
+                $('#products').empty();
+                $('#productsSmall').empty();
+                setContentProduct(data);
             }
         });
+    }
+
+    function searchProducts() {
+        if($('#search')[0].value.length==0){
+            getAllProducts();
+        }else{
+            jQuery.ajax({
+                type: "POST",
+                url: "admin/util.php",
+                data: {
+                    "method" : "findByProduct",
+                    "search" : $('#search')[0].value
+                },
+                async: false,
+                success: function(data){
+                    console.log($.parseJSON(data));
+                    $('#products').empty();
+                    $('#productsSmall').empty();
+                    setContentProduct(data);
+                }
+            });
+        }
     }
 
     function getFirstImageProduct(id, idImage) {
@@ -211,6 +155,117 @@
         location.href = 'producto.html?id='+id;
     }
 
+    function setContentProduct(data) {
+        var count =1;
+        var container = $('<div class="col-xs-12"></div>');
+        var form;
+        var idImage;
+        var images = [];
+        var imageStyle = "cursor: pointer; width: 100%; height: "+window.innerHeight/8+"px";
+        for(var i=0; i<$.parseJSON(data).length; i++){
+            if (count==1 || i==$.parseJSON(data).length-1){
+                form = $('<div class="form-group col-xs-2 col-xs-offset-1"></div>');
+            }else{
+                form = $('<div class="form-group col-xs-2"></div>');
+            }
+
+            idImage='image-'+i;
+            form.append('<img id="'+idImage+'" src="#" class="img-responsive" style="'+imageStyle+'" alt="" onclick="showDetails('+$.parseJSON(data)[i].id+')">' +
+                '<h4 class="nameFont" style="font-size: 1.5vw;">'+$.parseJSON(data)[i].nombre+'</h4>' +
+                '<h5 class="codeFont" style="font-size: 1vw;">'+$.parseJSON(data)[i].codigo+'</h5>');
+
+            container.append(form);
+
+            if(count==5 || i==$.parseJSON(data).length-1){
+                cont=0;
+                $('#products').append(container);
+                container = $('<div class="col-xs-12"></div>');
+            }
+
+            images.push(
+                {
+                    id:$.parseJSON(data)[i].id,
+                    idImage:idImage
+                }
+            );
+
+            count++;
+        }
+
+        for( i=0; i<images.length; i++){
+            getFirstImageProduct(images[i].id,images[i].idImage);
+        }
+
+        count =1;
+        container = $('<div class="col-md-12"></div>');
+        images = [];
+        imageStyle = "cursor: pointer; width: 100%; height: "+window.innerHeight/6+"px";
+        for( i=0; i<$.parseJSON(data).length; i++){
+            form = $('<div class="form-group col-md-2"></div>');
+
+            idImage='imagesm-'+i;
+            form.append('<img id="'+idImage+'" src="#" class="img-responsive" style="'+imageStyle+'" alt="" onclick="showDetails('+$.parseJSON(data)[i].id+')">' +
+                '<h4 class="nameFont" style="font-size: 1.5vw;">'+$.parseJSON(data)[i].nombre+'</h4>' +
+                '<h5 class="codeFont" style="font-size: 1vw;">'+$.parseJSON(data)[i].codigo+'</h5>');
+
+            container.append(form);
+
+            images.push(
+                {
+                    id:$.parseJSON(data)[i].id,
+                    idImage:idImage
+                }
+            );
+
+            count++;
+        }
+        $('#productsSmall').append(container);
+
+        for( i=0; i<images.length; i++){
+            getFirstImageProduct(images[i].id,images[i].idImage);
+        }
+    }
+
+    function setMarcas() {
+        jQuery.ajax({
+            type: "POST",
+            url: "admin/util.php",
+            data: {
+                "method" : "getAllMarcas"
+            },
+            async: false,
+            success: function(data){
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#marcas').append(' <div class="row" style="padding: 2%;" onclick="findByElement(\''+$.parseJSON(data)[i].nombre+'\')">' +
+                        '<a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">'+$.parseJSON(data)[i].nombre+'</a>' +
+                        '</div>');
+                }
+            }
+        });
+    }
+
+    function setMaquinarias() {
+        jQuery.ajax({
+            type: "POST",
+            url: "admin/util.php",
+            data: {
+                "method" : "getAllMaquinarias"
+            },
+            async: false,
+            success: function(data){
+                for(var i=0; i<$.parseJSON(data).length; i++){
+                    $('#maquinarias').append(' <div class="row" style="padding: 2%;" onclick="findByElement(\''+$.parseJSON(data)[i].nombre+'\')">' +
+                        '<a href="#" class="linkFixed" style="color: #fff; padding-left: 5%;">'+$.parseJSON(data)[i].nombre+'</a>' +
+                        '</div>');
+                }
+            }
+        });
+    }
+
+    function findByElement(element) {
+        $('#search')[0].value = element;
+        searchProducts();
+    }
 </script>
 </body>
 </html>

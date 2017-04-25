@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30db70f-60e4-4a7d-9383-a12402a06dd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/mail.php" afterPath="$PROJECT_DIR$/admin/mail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacto.html" afterPath="$PROJECT_DIR$/contacto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/util.php" afterPath="$PROJECT_DIR$/admin/util.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/producto.html" afterPath="$PROJECT_DIR$/producto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productos.html" afterPath="$PROJECT_DIR$/productos.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,48 +38,6 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="casadiessel@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="producto_has_maquinaria" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="casadiessel@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="maquinaria" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="casadiessel@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="fotos" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -87,48 +45,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contacto.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contacto.html">
+      <file leaf-file-name="productos.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/productos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="145" column="166" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="166" />
+            <state relative-caret-position="199">
+              <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
               <folding>
+                <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4897#5538#0" expanded="false" />
+                <element signature="e#5587#5993#0" expanded="false" />
+                <element signature="e#6024#6079#0" expanded="false" />
+                <element signature="e#6118#8729#0" expanded="false" />
+                <marker date="1493093072053" expanded="true" signature="6902:6919" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="7006:7021" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="8168:8185" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="8272:8287" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="9110:9122" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="9251:9281" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="9802:9814" ph="..." />
+                <marker date="1493093072053" expanded="true" signature="9943:9973" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="producto.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/producto.html">
+      <file leaf-file-name="util.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/util.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="137" column="72" lean-forward="false" selection-start-line="137" selection-start-column="72" selection-end-line="137" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/mail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
+                <marker date="1493093266553" expanded="true" signature="2417:2455" ph="SELECT id, n... usuario" />
+                <marker date="1493093266553" expanded="true" signature="2564:2621" ph="SELECT id, n... usuario" />
+                <marker date="1493093266553" expanded="true" signature="2564:2702" ph="SELECT id, n... " />
+                <marker date="1493093266553" expanded="true" signature="2645:2702" ph="SELECT id, n... usuario" />
+                <marker date="1493093266553" expanded="true" signature="2781:2832" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="2944:3014" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="2944:3023" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="2944:3774" ph="SELECT id, n... " />
+                <marker date="1493093266553" expanded="true" signature="3038:3108" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="3038:3117" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="3132:3206" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="3132:3215" ph="SELECT id, n... producto" />
+                <marker date="1493093266553" expanded="true" signature="3230:3504" ph="SELECT produ... producto" />
+                <marker date="1493093266553" expanded="true" signature="3230:3513" ph="SELECT produ... producto" />
+                <marker date="1493093266553" expanded="true" signature="3528:3767" ph="SELECT produ... producto" />
+                <marker date="1493093266553" expanded="true" signature="3528:3774" ph="SELECT produ... producto" />
+                <marker date="1493093266553" expanded="true" signature="3843:3860" ph="SELECT * FRO... rol" />
+                <marker date="1493093266553" expanded="true" signature="3936:3960" ph="SELECT * FRO... maquinaria" />
+                <marker date="1493093266553" expanded="true" signature="4031:4045" ph="SELECT * FRO... maquinaria" />
+                <marker date="1493093266553" expanded="true" signature="4031:4050" ph="SELECT * FRO... marca" />
+                <marker date="1493093266553" expanded="true" signature="4120:4138" ph="SELECT * FRO... tipo" />
+                <marker date="1493093266553" expanded="true" signature="4207:4237" ph="DELETE FROM " />
+                <marker date="1493093266553" expanded="true" signature="4321:4352" ph="SELECT * FRO... usuario" />
+                <marker date="1493093266553" expanded="true" signature="4434:4582" ph="INSERT INTO usuario... " />
+                <marker date="1493093266553" expanded="true" signature="4651:4797" ph="UPDATE usuar... " />
+                <marker date="1493093266553" expanded="true" signature="4882:4913" ph="DELETE FROM " />
+                <marker date="1493093266553" expanded="true" signature="5000:5032" ph="SELECT * FRO... producto" />
+                <marker date="1493093266553" expanded="true" signature="5117:5415" ph="INSERT INTO producto... " />
+                <marker date="1493093266553" expanded="true" signature="5487:5777" ph="UPDATE produ... " />
+                <marker date="1493093266553" expanded="true" signature="5874:5941" ph="SELECT idMaq... producto_has_maquinaria" />
+                <marker date="1493093266553" expanded="true" signature="6032:6089" ph="SELECT idMar... producto_has_marca" />
+                <marker date="1493093266553" expanded="true" signature="6190:6287" ph="SELECT * FRO... usuario" />
+                <marker date="1493093266553" expanded="true" signature="6355:6507" ph="INSERT INTO fotos... " />
+                <marker date="1493093266553" expanded="true" signature="6587:6624" ph="SELECT * FRO... fotos" />
+                <marker date="1493093266553" expanded="true" signature="6707:6767" ph="DELETE FROM " />
+                <marker date="1493093266553" expanded="true" signature="6867:6903" ph="DELETE FROM " />
+                <marker date="1493093266553" expanded="true" signature="6999:7053" ph="DELETE FROM " />
+                <marker date="1493093266553" expanded="true" signature="7147:7196" ph="DELETE FROM " />
+                <marker date="1493093266553" expanded="true" signature="7289:7413" ph="INSERT INTO producto_has_maquinaria... " />
+                <marker date="1493093266553" expanded="true" signature="7491:7600" ph="INSERT INTO producto_has_marca... " />
+                <marker date="1493093266553" expanded="true" signature="7687:7862" ph="SELECT nombr... maquinaria" />
+                <marker date="1493093266553" expanded="true" signature="7957:8102" ph="SELECT nombr... maquinaria" />
+                <marker date="1493093266553" expanded="true" signature="8194:8267" ph="SELECT * FRO... fotos" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="casadiessel.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/casadiessel.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,10 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>asy</find>
-      <find>findProduct</find>
-      <find>byId</find>
-      <find>attr</find>
       <find>delete</find>
       <find>oncl</find>
       <find>foto</find>
@@ -175,6 +180,10 @@
       <find>addMarcaFromProduct</find>
       <find>checkboxgroupmarcaGroup</find>
       <find>findMarcaNamesByProduct</find>
+      <find>getAllProducts</find>
+      <find>marca</find>
+      <find>saveImage</find>
+      <find>getallma</find>
     </findStrings>
     <replaceStrings>
       <replace>1vw</replace>
@@ -205,16 +214,11 @@
         <option value="$PROJECT_DIR$/admin/login.html" />
         <option value="$PROJECT_DIR$/admin/main.html" />
         <option value="$PROJECT_DIR$/casadiessel.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/996d2440-fdfe-404b-a8b6-48005ab00b08/console.sql" />
         <option value="$PROJECT_DIR$/admin/userDetail.html" />
         <option value="$PROJECT_DIR$/admin/user.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/productos.html" />
         <option value="$PROJECT_DIR$/admin/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/admin/productDetail.html" />
         <option value="$PROJECT_DIR$/admin/product.html" />
-        <option value="$PROJECT_DIR$/admin/util.php" />
         <option value="$PROJECT_DIR$/admin/main.php" />
         <option value="&lt;0084ad8f-e4a8-4dbc-9f6e-962ae485833b&gt;/public_html/admin/util.php" />
         <option value="&lt;0084ad8f-e4a8-4dbc-9f6e-962ae485833b&gt;/public_html/index.html" />
@@ -224,7 +228,12 @@
         <option value="&lt;0084ad8f-e4a8-4dbc-9f6e-962ae485833b&gt;/public_html/admin/mail.php" />
         <option value="$PROJECT_DIR$/admin/mail.php" />
         <option value="$PROJECT_DIR$/contacto.html" />
+        <option value="$PROJECT_DIR$/admin/productDetail.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/996d2440-fdfe-404b-a8b6-48005ab00b08/console.sql" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/producto.html" />
+        <option value="$PROJECT_DIR$/productos.html" />
+        <option value="$PROJECT_DIR$/admin/util.php" />
       </list>
     </option>
   </component>
@@ -272,6 +281,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casaDiessel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -891,7 +914,7 @@
       <workItem from="1490984428092" duration="6954000" />
       <workItem from="1491320393188" duration="2397000" />
       <workItem from="1492817633814" duration="22426000" />
-      <workItem from="1493086002778" duration="2742000" />
+      <workItem from="1493086002778" duration="7303000" />
     </task>
     <task id="LOCAL-00001" summary="hidden background color in nav bar">
       <created>1487640821837</created>
@@ -1145,38 +1168,45 @@
       <option name="project" value="LOCAL" />
       <updated>1492893407518</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="cambios finales 2">
+      <created>1493088760835</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1493088760835</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186137000" />
+    <option name="totallyTimeSpent" value="190698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28366113" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27659574" sideWeight="0.5060514" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1376702" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27659574" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27659574" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3512786" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27659574" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34795764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1376702" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5139116" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47106326" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27725437" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5139116" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1204,7 +1234,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test de backend" />
     <MESSAGE value="refactorizacion de consultas backend" />
     <MESSAGE value="union con el backend completo de usuario" />
     <MESSAGE value="tabla de producto" />
@@ -1229,34 +1258,16 @@
     <MESSAGE value="refactorizacion delete" />
     <MESSAGE value="buenas practicas" />
     <MESSAGE value="cambios finales 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios finales 1" />
+    <MESSAGE value="cambios finales 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios finales 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.fotos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="6521" column="22" lean-forward="false" selection-start-line="6521" selection-start-column="19" selection-end-line="6521" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.fotos">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1338,6 +1349,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1350,6 +1362,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,6 +1375,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,6 +1388,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1386,6 +1401,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1398,6 +1414,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1410,6 +1427,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1442,6 +1460,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,13 +1473,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.fotos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1484,13 +1497,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/license.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1507,6 +1513,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,6 +1526,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,18 +1539,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.maquinaria">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,6 +1552,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1567,6 +1565,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,6 +1578,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1591,6 +1591,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1606,95 +1607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-151">
           <caret line="83" column="56" lean-forward="false" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.producto_has_marca">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.producto">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
-          <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.marca">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1492882188260" expanded="true" signature="2417:2455" ph="SELECT id, n... usuario" />
-            <marker date="1492882188260" expanded="true" signature="2564:2621" ph="SELECT id, n... usuario" />
-            <marker date="1492882188260" expanded="true" signature="2564:2702" ph="SELECT id, n... " />
-            <marker date="1492882188260" expanded="true" signature="2645:2702" ph="SELECT id, n... usuario" />
-            <marker date="1492882188260" expanded="true" signature="2781:2839" ph="SELECT id, n... producto" />
-            <marker date="1492882188260" expanded="true" signature="2951:3021" ph="SELECT id, n... producto" />
-            <marker date="1492882188260" expanded="true" signature="2951:3213" ph="SELECT id, n... " />
-            <marker date="1492882188260" expanded="true" signature="3045:3115" ph="SELECT id, n... producto" />
-            <marker date="1492882188260" expanded="true" signature="3139:3213" ph="SELECT id, n... producto" />
-            <marker date="1492882188260" expanded="true" signature="3289:3306" ph="SELECT * FRO... rol" />
-            <marker date="1492882188260" expanded="true" signature="3382:3406" ph="SELECT * FRO... maquinaria" />
-            <marker date="1492882188260" expanded="true" signature="3477:3491" ph="SELECT * FRO... maquinaria" />
-            <marker date="1492882188260" expanded="true" signature="3477:3496" ph="SELECT * FRO... marca" />
-            <marker date="1492882188260" expanded="true" signature="3566:3584" ph="SELECT * FRO... tipo" />
-            <marker date="1492882188260" expanded="true" signature="3653:3683" ph="DELETE FROM " />
-            <marker date="1492882188260" expanded="true" signature="3767:3798" ph="SELECT * FRO... usuario" />
-            <marker date="1492882188260" expanded="true" signature="3880:4028" ph="INSERT INTO usuario... " />
-            <marker date="1492882188260" expanded="true" signature="4097:4243" ph="UPDATE usuar... " />
-            <marker date="1492882188260" expanded="true" signature="4328:4359" ph="DELETE FROM " />
-            <marker date="1492882188260" expanded="true" signature="4446:4478" ph="SELECT * FRO... producto" />
-            <marker date="1492882188260" expanded="true" signature="4563:4861" ph="INSERT INTO producto... " />
-            <marker date="1492882188260" expanded="true" signature="4933:5223" ph="UPDATE produ... " />
-            <marker date="1492882188260" expanded="true" signature="5320:5387" ph="SELECT idMaq... producto_has_maquinaria" />
-            <marker date="1492882188260" expanded="true" signature="5478:5535" ph="SELECT idMar... producto_has_marca" />
-            <marker date="1492882188260" expanded="true" signature="5636:5733" ph="SELECT * FRO... usuario" />
-            <marker date="1492882188260" expanded="true" signature="5801:5953" ph="INSERT INTO fotos... " />
-            <marker date="1492882188260" expanded="true" signature="6033:6070" ph="SELECT * FRO... fotos" />
-            <marker date="1492882188260" expanded="true" signature="6153:6213" ph="DELETE FROM " />
-            <marker date="1492882188260" expanded="true" signature="6313:6349" ph="DELETE FROM " />
-            <marker date="1492882188260" expanded="true" signature="6445:6499" ph="DELETE FROM " />
-            <marker date="1492882188260" expanded="true" signature="6593:6642" ph="DELETE FROM " />
-            <marker date="1492882188260" expanded="true" signature="6735:6859" ph="INSERT INTO producto_has_maquinaria... " />
-            <marker date="1492882188260" expanded="true" signature="6937:7046" ph="INSERT INTO producto_has_marca... " />
-            <marker date="1492882188260" expanded="true" signature="7133:7308" ph="SELECT nombr... maquinaria" />
-            <marker date="1492882188260" expanded="true" signature="7403:7548" ph="SELECT nombr... maquinaria" />
-            <marker date="1492882188260" expanded="true" signature="7640:7713" ph="SELECT * FRO... fotos" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1717,18 +1630,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.producto">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.maquinaria">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.producto_has_maquinaria">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.fotos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/productDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="478" column="25" lean-forward="true" selection-start-line="478" selection-start-column="25" selection-end-line="478" selection-end-column="25" />
+        <state relative-caret-position="194">
+          <caret line="336" column="26" lean-forward="true" selection-start-line="336" selection-start-column="26" selection-end-line="336" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/996d2440-fdfe-404b-a8b6-48005ab00b08/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contacto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="145" column="166" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="166" />
+        <state relative-caret-position="238">
+          <caret line="142" column="9" lean-forward="true" selection-start-line="134" selection-start-column="3" selection-end-line="142" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1737,11 +1710,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.producto_has_marca">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d27bf6c3/996d2440-fdfe-404b-a8b6-48005ab00b08/casadiessel.marca">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/producto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="137" column="72" lean-forward="false" selection-start-line="137" selection-start-column="72" selection-end-line="137" selection-end-column="72" />
+        <state relative-caret-position="129">
+          <caret line="240" column="13" lean-forward="false" selection-start-line="240" selection-start-column="13" selection-end-line="240" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/util.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <marker date="1493093266553" expanded="true" signature="2417:2455" ph="SELECT id, n... usuario" />
+            <marker date="1493093266553" expanded="true" signature="2564:2621" ph="SELECT id, n... usuario" />
+            <marker date="1493093266553" expanded="true" signature="2564:2702" ph="SELECT id, n... " />
+            <marker date="1493093266553" expanded="true" signature="2645:2702" ph="SELECT id, n... usuario" />
+            <marker date="1493093266553" expanded="true" signature="2781:2832" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="2944:3014" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="2944:3023" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="2944:3774" ph="SELECT id, n... " />
+            <marker date="1493093266553" expanded="true" signature="3038:3108" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="3038:3117" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="3132:3206" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="3132:3215" ph="SELECT id, n... producto" />
+            <marker date="1493093266553" expanded="true" signature="3230:3504" ph="SELECT produ... producto" />
+            <marker date="1493093266553" expanded="true" signature="3230:3513" ph="SELECT produ... producto" />
+            <marker date="1493093266553" expanded="true" signature="3528:3767" ph="SELECT produ... producto" />
+            <marker date="1493093266553" expanded="true" signature="3528:3774" ph="SELECT produ... producto" />
+            <marker date="1493093266553" expanded="true" signature="3843:3860" ph="SELECT * FRO... rol" />
+            <marker date="1493093266553" expanded="true" signature="3936:3960" ph="SELECT * FRO... maquinaria" />
+            <marker date="1493093266553" expanded="true" signature="4031:4045" ph="SELECT * FRO... maquinaria" />
+            <marker date="1493093266553" expanded="true" signature="4031:4050" ph="SELECT * FRO... marca" />
+            <marker date="1493093266553" expanded="true" signature="4120:4138" ph="SELECT * FRO... tipo" />
+            <marker date="1493093266553" expanded="true" signature="4207:4237" ph="DELETE FROM " />
+            <marker date="1493093266553" expanded="true" signature="4321:4352" ph="SELECT * FRO... usuario" />
+            <marker date="1493093266553" expanded="true" signature="4434:4582" ph="INSERT INTO usuario... " />
+            <marker date="1493093266553" expanded="true" signature="4651:4797" ph="UPDATE usuar... " />
+            <marker date="1493093266553" expanded="true" signature="4882:4913" ph="DELETE FROM " />
+            <marker date="1493093266553" expanded="true" signature="5000:5032" ph="SELECT * FRO... producto" />
+            <marker date="1493093266553" expanded="true" signature="5117:5415" ph="INSERT INTO producto... " />
+            <marker date="1493093266553" expanded="true" signature="5487:5777" ph="UPDATE produ... " />
+            <marker date="1493093266553" expanded="true" signature="5874:5941" ph="SELECT idMaq... producto_has_maquinaria" />
+            <marker date="1493093266553" expanded="true" signature="6032:6089" ph="SELECT idMar... producto_has_marca" />
+            <marker date="1493093266553" expanded="true" signature="6190:6287" ph="SELECT * FRO... usuario" />
+            <marker date="1493093266553" expanded="true" signature="6355:6507" ph="INSERT INTO fotos... " />
+            <marker date="1493093266553" expanded="true" signature="6587:6624" ph="SELECT * FRO... fotos" />
+            <marker date="1493093266553" expanded="true" signature="6707:6767" ph="DELETE FROM " />
+            <marker date="1493093266553" expanded="true" signature="6867:6903" ph="DELETE FROM " />
+            <marker date="1493093266553" expanded="true" signature="6999:7053" ph="DELETE FROM " />
+            <marker date="1493093266553" expanded="true" signature="7147:7196" ph="DELETE FROM " />
+            <marker date="1493093266553" expanded="true" signature="7289:7413" ph="INSERT INTO producto_has_maquinaria... " />
+            <marker date="1493093266553" expanded="true" signature="7491:7600" ph="INSERT INTO producto_has_marca... " />
+            <marker date="1493093266553" expanded="true" signature="7687:7862" ph="SELECT nombr... maquinaria" />
+            <marker date="1493093266553" expanded="true" signature="7957:8102" ph="SELECT nombr... maquinaria" />
+            <marker date="1493093266553" expanded="true" signature="8194:8267" ph="SELECT * FRO... fotos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4897#5538#0" expanded="false" />
+            <element signature="e#5587#5993#0" expanded="false" />
+            <element signature="e#6024#6079#0" expanded="false" />
+            <element signature="e#6118#8729#0" expanded="false" />
+            <marker date="1493093072053" expanded="true" signature="6902:6919" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="7006:7021" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="8168:8185" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="8272:8287" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="9110:9122" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="9251:9281" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="9802:9814" ph="..." />
+            <marker date="1493093072053" expanded="true" signature="9943:9973" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

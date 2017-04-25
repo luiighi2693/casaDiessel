@@ -142,7 +142,7 @@ function findByUser(){
 }
 
 function getAllProducts(){
-    $query = 'SELECT id, nombre, codigo, marca, referencia FROM producto';
+    $query = 'SELECT id, nombre, codigo, referencia FROM producto';
     executeQuery($query);
 }
 
@@ -150,7 +150,11 @@ function findByProduct(){
     $data = "'%".$_POST['search']."%'";
     $query = 'SELECT id, nombre, codigo, referencia FROM producto WHERE nombre LIKE '.$data.' UNION
         SELECT id, nombre, codigo, referencia FROM producto WHERE codigo LIKE '.$data.' UNION
-        SELECT id, nombre, codigo, referencia FROM producto WHERE referencia LIKE '.$data;
+        SELECT id, nombre, codigo, referencia FROM producto WHERE referencia LIKE '.$data.' UNION
+        SELECT producto.id, producto.nombre, codigo, referencia FROM producto INNER JOIN producto_has_maquinaria ON producto.id = producto_has_maquinaria.idProducto
+          INNER JOIN maquinaria ON producto_has_maquinaria.idMaquinaria = maquinaria.id WHERE maquinaria.nombre LIKE '.$data.' UNION
+        SELECT producto.id, producto.nombre, codigo, referencia FROM producto INNER JOIN producto_has_marca ON producto.id = producto_has_marca.idProducto
+          INNER JOIN marca ON producto_has_marca.idMarca = marca.id WHERE marca.nombre LIKE '.$data;
     executeQuery($query);
 }
 
